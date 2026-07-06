@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --primary-01: #BC6C25;
+    --primary-02: #DEA15E;
+    --light-01: #FEFADF;
+    --black-01: #0F140A;
+    --black-02: #283519;
+    --black-03: #5C2F07;
+    --secondary-01: #606D38;
+}
+
+body{
+    background-color: var(--primary-01);
+}
