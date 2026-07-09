@@ -678,6 +678,11 @@
             align-items: flex-start;
             flex-direction: column;
             gap: 26px;
+
+                .Copyright{
+                    font-size: 0.625rem;
+                    margin-top: 18px;
+                }
         }
 
         /* Contact */
@@ -703,6 +708,15 @@
                     }
            } 
         /* ------- */
+
+        /* SocialMedia */
+            .Footer .Container .Bloc_2 .SocialMedia{
+                display: flex;
+                align-items: center;
+                gap: 28px;
+            }
+        /* ----------- */
+        
     /* ------------------ */
     
 /* ------ */
