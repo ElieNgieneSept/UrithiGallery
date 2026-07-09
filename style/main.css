@@ -164,7 +164,7 @@
                 width: 100%;
                 padding: 16px 0px;
                 position: fixed;
-                background-color: color-mix(in srgb, var(--primary-01) 20%, transparent);
+                background-color: color-mix(in srgb, var(--primary-01) 78%, transparent);
                 backdrop-filter: blur(4px);
                 z-index: 100;
 
@@ -516,8 +516,196 @@
         /* --------------- */
 
     /* ---- */
+
+    /* Grille-Container */
+        .Grille-Section .Container .Card-Container{
+            display: flex;
+            align-items: flex-start; /* Les colonnes s'étendent seulement selon leur contenu */
+            gap: 12px; /* Espacement horizontal entre les deux colonnes */
+            width: 100%;
+
+            /* Chaque colonne prend exactement 50% de la largeur */
+            .Col{
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                gap: 20px; /* Espacement vertical entre les cartes */
+            }
+
+            .Card{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+
+                    .Img-Container{
+                        width: 100%;
+
+                        .Card-Img{
+                            width: 100%;
+                            height: auto;
+                            display: block;
+                            border-radius: 8px;
+                        }
+                    }
+                    
+                }
+                /* Infos */
+                    .Card .Infos{
+                        display: flex;
+                        justify-content: flex-start;
+                        flex-direction: column;
+                        gap: 6px;
+                            
+                            .Title{
+                                font-size: 0.75rem;
+                                font-weight: 700;
+                                letter-spacing: -3%; 
+                            }
+                            .Size{
+                                font-size: 0.75rem;
+                                letter-spacing: -3%;  
+                            }
+                            .Badge{
+                                font-size: 0.625rem;
+                                letter-spacing: -3%;
+                                background-color: var(--primary-02);
+                                color: var(--black-01);
+                                padding: 4px 6px;
+                                width: fit-content;
+                                border-radius: 4px;
+                            }
+                    }
+                /* ----- */
+        }
+    /* ---------------- */
     
 /* ---------------- */
+
+/* Footer */
+    .Footer{
+        width: 100%;
+        height: 424px;
+        background-color: var(--black-03);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .Footer .Deco_2{
+        width: 192px;
+        position: absolute;
+        right: -76px;
+        top: -20px;
+    }
+
+    .Footer .Container{
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 44px;
+        padding: 40px 20px;
+    }
+
+    /* Bloc_1 ---------------- */
+        .Footer .Container .Bloc_1{
+            width: 268px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-direction: column;
+            gap: 18px;
+        }
+        /* bloc ------------ */
+            .Footer .Container .Bloc_1 .bloc{
+                width: 100%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+                flex-direction: column;
+
+                    .Grp{
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        flex-direction: column;
+
+                            .Logo{
+                                width: 132px;
+                            }
+                            p{
+                                font-size: 1.125rem;
+                                font-weight: 700;
+                                letter-spacing: -3%;
+                            }
+                    }
+                    p{
+                        font-size: 0.625rem;
+                        letter-spacing: -3%;
+                    }
+            }
+        /* ---------------- */
+
+        /* Link-Container */
+            .Footer .Container .Bloc_1 .Link-Container{
+                width: 278px;
+                margin-left: -10px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                align-items: flex-start;
+
+                    .Link{
+                        font-size: 0.75rem;
+                        letter-spacing: -4%;
+                        text-decoration: none;
+                        color: var(--ligh-01);
+                        padding: 4px 10px;
+                    }
+            }
+        /* ------------- */
+    /* --------------------- */
+
+    /* Bloc_2 ------------ */
+        .Footer .Container .Bloc_2{
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-direction: column;
+            gap: 26px;
+        }
+
+        /* Contact */
+           .Footer .Container .Bloc_2 .Contact{
+                width: 100%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 12px;
+
+                    .Mail, .Number{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 4px;
+
+                        font-size: 0.6875rem;
+
+                            img {
+                                margin-top: 1px;
+                            }
+                    }
+           } 
+        /* ------- */
+    /* ------------------ */
+    
+/* ------ */
 
     
     
