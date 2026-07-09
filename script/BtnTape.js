@@ -25,8 +25,7 @@ function setupButtonInteraction(buttonSelector, tapeClass, duration) {
     boutons.forEach(bouton => {
       // Événement pour le début du toucher
       bouton.addEventListener("touchstart", (e) => {
-        // Empêche le comportement par défaut du navigateur
-        e.preventDefault();
+        // e.preventDefault(); // Retiré pour ne pas bloquer les liens (<a>) et le scroll
         // Ajoute la classe pour déclencher l'animation
         bouton.classList.add(tapeClass);
       });
@@ -52,3 +51,5 @@ function setupButtonInteraction(buttonSelector, tapeClass, duration) {
 setupButtonInteraction(".Button01", "tape01", 300);
 // Boutons .Button02 ...
 setupButtonInteraction(".Button02", "tape02", 900);
+// Boutons de Filtre (.Btn-Filter)
+setupButtonInteraction(".Btn-Filter", "tape-filter", 200);

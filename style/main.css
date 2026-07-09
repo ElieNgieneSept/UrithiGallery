@@ -3,6 +3,7 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        -webkit-tap-highlight-color: transparent;
     }
     :root {
         --primary-01: #BC6C25;
@@ -51,7 +52,7 @@
     .Button01 {
         text-align: center;
         color: var(--ligh-01);
-        background-color: #000000;
+        background-color: var(--black-01);
         border: none;
         border-radius: 6px;
         -webkit-box-sizing: border-box;
@@ -79,16 +80,18 @@
         pointer-events: none;
     }
 
-    .Button01:hover {
-        background-color: #072CC1;
-        -webkit-box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
-        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
-        -webkit-transform: translateY(-2px);
-        transform: translateY(-2px);
+    @media (hover: hover) {
+        .Button01:hover {
+            background-color: var(--black-01);
+            -webkit-box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+            -webkit-transform: translateY(-2px);
+            transform: translateY(-2px);
+        }
     }
 
     .Button01:active {
-        background-color: #072CC1;
+        background-color: var(--black-01);
         -webkit-box-shadow: none;
         box-shadow: none;
         -webkit-transform: scale(0.8);
@@ -97,15 +100,15 @@
 
     .Button01.tape01 {
         background-color: #000000;
-        -webkit-box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
-        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+        /* -webkit-box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4); */
         -webkit-transform: translateY(-2px);
         transform: translateY(-2px);
     }
 
     /* ⚠️ A utiliser que si le boutton à un changement de couleur au hover */
     .is-touch-device .Button01:hover {
-        background-color: #0D3CF9;
+        background-color: var(--black-01);
         -webkit-box-shadow: none;
         box-shadow: none;
         -webkit-transform: none;
@@ -132,12 +135,14 @@
         background-color: var(--black-01);
     }
 
-    .Button01.Primary:hover {
-        background-color: var(--black-01);
-        -webkit-box-shadow: 0 8px 15px rgba(55, 23, 1, 0.4);
-        box-shadow: 0 8px 15px rgba(55, 23, 1, 0.4);
-        -webkit-transform: translateY(-2px);
-        transform: translateY(-2px);
+    @media (hover: hover) {
+        .Button01.Primary:hover {
+            background-color: var(--black-01);
+            -webkit-box-shadow: 0 8px 15px rgba(55, 23, 1, 0.4);
+            box-shadow: 0 8px 15px rgba(55, 23, 1, 0.4);
+            -webkit-transform: translateY(-2px);
+            transform: translateY(-2px);
+        }
     }
 
     .Button01.Primary:active {
@@ -150,26 +155,6 @@
 
     .Button01.Primary.tape01 {
         background-color: var(--black-01);
-        -webkit-box-shadow: 0 8px 15px rgba(55, 23, 1, 0.4);
-        box-shadow: 0 8px 15px rgba(55, 23, 1, 0.4);
-    }
-
-    .Button01.Secondary {
-        background-color: #FFFFFF;
-        border: 1px solid #0d3cf9;
-        color: #0D3CF9;
-    }
-
-    .Button01.Secondary:hover {
-        background-color: rgba(13, 60, 249, 0.2);
-        -webkit-box-shadow: 0 8px 15px rgba(7, 44, 193, 0.4);
-        box-shadow: 0 8px 15px rgba(7, 44, 193, 0.4);
-    }
-
-    .Button01.Secondary.tape01 {
-        background-color: rgba(13, 60, 249, 0.2);
-        -webkit-box-shadow: 0 8px 15px rgba(7, 44, 193, 0.4);
-        box-shadow: 0 8px 15px rgba(7, 44, 193, 0.4);
     }
 /* .................. */
 
@@ -462,6 +447,8 @@
             flex-direction: column;
             align-items: flex-start;
             gap: 20px;
+            position: relative;
+            z-index: 1;
 
                 h2{
                     font-family: 'Title', sans-serif;
@@ -479,6 +466,7 @@
                 align-items: flex-start;
                 gap: 14px;
 
+                /* Title */
                     .Title{
                         display: flex;
                         justify-content: flex-start;
@@ -486,14 +474,49 @@
                         gap: 6px;
 
                             p{
-                                font-family: 'Body', sans-serif;
                                 font-size: 0.875rem;
                             }
                     }
+                /* ------ */
+                
+                /* FilterGrp */
+                    .FilterGrp{
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        flex-wrap: wrap;
+                        gap: 6px;
+
+                            .Btn-Filter{
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                padding: 10px 14px;
+                                border: none;
+                                border-radius: 50px;
+                                background-color: color-mix(in srgb, var(--black-01) 46%, transparent);
+                                color: var(--ligh-01);
+                                cursor: pointer;
+                                transition: transform 0.2s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.3s ease;
+
+                                font-size: 0.875rem;
+                                letter-spacing: -3%;
+                            }
+                            
+                            .Btn-Filter.active{
+                                background-color: var(--black-01);
+                            }
+                            .Btn-Filter:active, .Btn-Filter.tape-filter {
+                                transform: scale(0.92);
+                            }
+
+                    }
+                /* -------- */
             }
         /* --------------- */
-        
+
     /* ---- */
+    
 /* ---------------- */
 
     
