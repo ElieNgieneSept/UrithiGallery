@@ -61,3 +61,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         requestAnimationFrame(animation);
     });
 });
+
+// Navbar : opacité au scroll
+const navbar = document.querySelector('.Navbar');
+const onScroll = () => {
+    if (window.scrollY > 20) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+};
+window.addEventListener('scroll', onScroll, { passive: true });
