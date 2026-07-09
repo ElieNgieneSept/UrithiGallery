@@ -8,8 +8,100 @@
 </head>
 <body>
     <main>
-        <h1>Welcome</h1>
-        <p>Mbote</p>
+        <!-- Navbar -->
+            <nav class="Navbar">
+                <div class="Navbar-Container">
+                    <img class="Logo-img" src="./assets/images/Logo-ArtGallery.svg" alt="Logo-ArtGallery">
+                    <ul class="Menu-Desktop">
+                        <li><a href="#">Mon portfolio</a></li>
+                        <li><a href="#">A propos de moi</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+            
+                    <!-- Menu Mobile -->
+                    <button class="BtnBurger">
+                        <svg viewBox="0 0 64 48">
+                            <path d="M19,15 L45,15 C70,15 58,-2 49.0177126,7 L19,37"></path>
+                            <path d="M19,24 L45,24 C61.2371586,24 57,49 41,33 L32,24"></path>
+                            <path d="M45,33 L19,33 C-8,33 6,-2 22,14 L45,37"></path>
+                        </svg>
+                    </button>
+                </div>
+            </nav>
+            <!-- List menu mobile externe -->
+            <div class="Menu-Mobile">
+                <div class="ListMenu">
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#">Œuvres</a></li>
+                    <li><a href="#">À propos</a></li>
+                    <li><a href="#">Contact</a></li>
+                </div>
+            </div>
+        <!-- ------ -->
+
+        <!-- Illust_1 -->
+            <img class="Illust_1"  src="./assets/images/Illust_1.png" alt="">
+        <!-- -------- -->
+
+        <!-- Hero -->
+            <section class="Hero-Section">
+                <div class="Container">
+                    <div class="Content">
+                        <div class="Bloc">
+                            <div class="bloc_1">
+                                <h1>Notre Culture,<br>notre Art</h1>
+                                <p>
+                                    Découvrez notre sélection exclusive de peintures, 
+                                    sculptures, œuvres littéraires et créations de mode 
+                                    issues du riche patrimoine de la RDC.
+                                </p>
+                            </div>
+                            <button class="Button01 Primary Large" role="button">Explorer la Galerie </button>
+                        </div>
+                        <img class="Indicator" src="./assets/images/Indicator.svg" alt="Indicator">
+                    </div>
+                    <img class="Deco_1" src="./assets/images/Deco_1.svg" alt="deco">
+                </div>
+            </section>
+        <!-- ---- -->
+        <!-- Grille-Section -->
+            <section class="Grille-Section">
+                <div class="Container">
+                    <div class="Bloc">
+                        <h2>Trouvez votre<br>bonheur</h2>
+                        <div class="Filter-Container">
+                            <div class="Title">
+                                <img class="Icon-Filter" src="./assets/images/Icon-Filter.svg" alt="Icon-Filter">
+                                <p>Filtrer par .......................................</p>
+                            </div>
+                            <div class="FilterGrp">
+                                <button class="Btn-Filter active">Tout</button>
+                                <button class="Btn-Filter">Peintures</button>
+                                <button class="Btn-Filter">Sculptures</button>
+                                <button class="Btn-Filter">Littératures</button>
+                                <button class="Btn-Filter">Mode</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="Card-Container">
+                        <div class="Card">
+                            <div class="Img-Container">
+                                <img class="Card-Img" src="" alt="">
+                            </div>
+                            <div class="Infos">
+                                <p class="Title">Titre de l'œuvre</p>
+                                <p class="Size">80x60px</p>
+                                <p class="Badge">Peinture</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        <!-- -------------- -->
     </main>
+
+    <script src="script/main.js"></script>
+    <script src="script/BtnTape.js"></script>
 </body>
 </html>

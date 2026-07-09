@@ -1,18 +1,501 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-:root {
-    --primary-01: #BC6C25;
-    --primary-02: #DEA15E;
-    --light-01: #FEFADF;
-    --black-01: #0F140A;
-    --black-02: #283519;
-    --black-03: #5C2F07;
-    --secondary-01: #606D38;
-}
+/* Root ......... */
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    :root {
+        --primary-01: #BC6C25;
+        --primary-02: #DEA15E;
+        --light-01: #FEFADF;
+        --black-01: #0F140A;
+        --black-02: #283519;
+        --black-03: #5C2F07;
+        --secondary-01: #606D38;
+    }
 
-body{
-    background-color: var(--primary-01);
-}
+    @font-face {
+        font-family: 'Title';
+        src: url('../public/font/Mulish-VariableFont_wght.ttf') format('truetype');
+        font-weight: 100 900; /* Plage de poids pour le font variable */
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Body';
+        src: url('../public/font/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+        font-weight: 100 900; /* Plage de poids pour le font variable */
+        font-style: normal;
+    }
+    html{
+        overflow: auto;
+    }
+
+    body {
+        min-height: 100vh;
+        background-color: var(--primary-01);
+        /* Superposition : 1. Le dégradé sombre vers le bas, 2. Le pattern de pointillés (6% d'opacité) */
+        background-image: linear-gradient(134deg, #bc6c2500 0%, #BC6C25 100%), radial-gradient(#fefadf12 2px, #fefadf00 2px);
+        background-size: 100% 100%, 10px 10px; /* Taille du dégradé (100%) et espacement des points (20px) */
+        background-position: center, 0 0;
+        background-attachment: fixed; /* Fixe le fond pour qu'il ne défile pas avec le contenu */
+        color: var(--light-01);
+        font-family: 'Body', sans-serif;
+        position: relative;
+        overflow: clip;
+    }
+/* .............. */
+
+
+/* Stylisation Button01*/
+    .Button01 {
+        text-align: center;
+        color: var(--ligh-01);
+        background-color: #000000;
+        border: none;
+        border-radius: 6px;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        outline: none;
+        cursor: pointer;
+        max-width: -webkit-fit-content;
+        max-width: -moz-fit-content;
+        max-width: fit-content;
+        padding: 12px 28px;
+        -webkit-transition: all 300ms ease-in-out;
+        transition: all 300ms ease-in-out;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        /* empecher la copie du texte du bouton */
+        -webkit-user-select: none;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+        /* bloquer les manipulation pas importante tels que le double-tap pour zoom*/
+    }
+
+    .Button01:disabled {
+        /* désactive les interactions de la souris sur les éléments lorsqu'il est dans l'état :disabled */
+        pointer-events: none;
+    }
+
+    .Button01:hover {
+        background-color: #072CC1;
+        -webkit-box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+        -webkit-transform: translateY(-2px);
+        transform: translateY(-2px);
+    }
+
+    .Button01:active {
+        background-color: #072CC1;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        -webkit-transform: scale(0.8);
+        transform: scale(0.8);
+    }
+
+    .Button01.tape01 {
+        background-color: #000000;
+        -webkit-box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+        -webkit-transform: translateY(-2px);
+        transform: translateY(-2px);
+    }
+
+    /* ⚠️ A utiliser que si le boutton à un changement de couleur au hover */
+    .is-touch-device .Button01:hover {
+        background-color: #0D3CF9;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        -webkit-transform: none;
+        transform: none;
+    }
+
+    /*------------ */
+    /* Sizing ---------- */
+    .Button01.Small {
+        padding: 6px 12px;
+    }
+
+    .Button01.Medium {
+        padding: 10px 22px;
+    }
+
+    .Button01.Large {
+        padding: 14px 14px;
+        max-width: 200px;
+    }
+
+    /*---------------------*/
+    .Button01.Primary {
+        background-color: var(--black-01);
+    }
+
+    .Button01.Primary:hover {
+        background-color: var(--black-01);
+        -webkit-box-shadow: 0 8px 15px rgba(55, 23, 1, 0.4);
+        box-shadow: 0 8px 15px rgba(55, 23, 1, 0.4);
+        -webkit-transform: translateY(-2px);
+        transform: translateY(-2px);
+    }
+
+    .Button01.Primary:active {
+        background-color: var(--black-01);
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        -webkit-transform: scale(0.8);
+        transform: scale(0.8);
+    }
+
+    .Button01.Primary.tape01 {
+        background-color: var(--black-01);
+        -webkit-box-shadow: 0 8px 15px rgba(55, 23, 1, 0.4);
+        box-shadow: 0 8px 15px rgba(55, 23, 1, 0.4);
+    }
+
+    .Button01.Secondary {
+        background-color: #FFFFFF;
+        border: 1px solid #0d3cf9;
+        color: #0D3CF9;
+    }
+
+    .Button01.Secondary:hover {
+        background-color: rgba(13, 60, 249, 0.2);
+        -webkit-box-shadow: 0 8px 15px rgba(7, 44, 193, 0.4);
+        box-shadow: 0 8px 15px rgba(7, 44, 193, 0.4);
+    }
+
+    .Button01.Secondary.tape01 {
+        background-color: rgba(13, 60, 249, 0.2);
+        -webkit-box-shadow: 0 8px 15px rgba(7, 44, 193, 0.4);
+        box-shadow: 0 8px 15px rgba(7, 44, 193, 0.4);
+    }
+/* .................. */
+
+/* Navbar ---------- */
+        /* Desktop ----------- */
+            .Navbar {
+                width: 100%;
+                padding: 16px 0px;
+                position: fixed;
+                background-color: color-mix(in srgb, var(--primary-01) 20%, transparent);
+                backdrop-filter: blur(4px);
+                z-index: 100;
+
+                /* Responsive Tablette */
+                    @media (max-width: 860px) {
+                        padding: 10px 0px;
+                    }
+            }
+
+            .Navbar a{
+                font-family: 'Body', sans-serif;
+                font-size: 0.75rem;
+                font-weight: 400;
+                text-decoration: none;
+                color: var(--light-01);
+
+                & :hover{
+                    font-weight: bold;
+                    text-decoration: underline;
+                }
+            }
+
+            .Logo{
+                /* Responsive Tablette */
+                    @media (max-width: 500px) {
+                        width: 112px;
+                    }
+            }
+
+            .Navbar-Container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 90%;
+                max-width: 1160px;
+                margin: 0 auto;
+            }
+
+            .Menu-Desktop{
+                display: flex;
+                gap: 40px;
+                list-style-type: none;
+
+                /* Responsive Tablette */
+                    @media (max-width: 860px) {
+                        display: none;
+                    }
+            }
+        /* -------------------- */
+        
+        /* Mobile ------------------- */
+            /* BtnBurger ------ */
+                .BtnBurger {
+                    display: none;
+                    width: 36px;
+                    height: 36px;
+                    padding: 0;
+                    margin: 0;
+                    outline: none;
+                    position: relative;
+                    border: none;
+                    background: none;
+                    z-index: 100;
+                    cursor: pointer;
+                    -webkit-appearence: none;
+                    -webkit-tap-highlight-color: transparent;
+
+                    svg {
+                        width: 64px;
+                        height: 48px;
+                        top: -6px;
+                        left: -14px;
+                        stroke: var(--light-01);
+                        stroke-width: 4px;
+                        stroke-linecap:square;
+                        stroke-linejoin:round;
+                        fill: none;
+                        display: block;
+                        position: absolute;
+
+                        path {
+                            transition: stroke-dasharray var(--duration, .85s) var(--easing, ease) var(--delay, 0s), stroke-dashoffset var(--duration, .85s) var(--easing, ease) var(--delay, 0s);
+                            stroke-dasharray: var(--array-1, 26px) var(--array-2, 100px);
+                            stroke-dashoffset: var(--offset, 126px);
+                            transform: translateZ(0);
+
+                            &:nth-child(2) {
+                                --duration: .7s;
+                                --easing: ease-in;
+                                --offset: -6px;
+                                --array-2: 74px;
+                            }
+
+                            &:nth-child(3) {
+                                --offset: 133px;
+                                --array-2: 107px;
+                            }
+                        }
+                    }
+
+                    &.active {
+                        svg {
+                            path {
+                                --offset: 57px;
+
+                                &:nth-child(1),
+                                &:nth-child(3) {
+                                    --delay: .15s;
+                                    --easing: cubic-bezier(.2, .4, .2, 1.1);
+                                }
+
+                                &:nth-child(2) {
+                                    --duration: .4s;
+                                    --offset: 2px;
+                                    --array-1: 1px;
+                                }
+
+                                &:nth-child(3) {
+                                    --offset: 58px;
+                                }
+                            }
+                        }
+                    }
+
+                    /* Responsive Tablette */
+                        @media (max-width: 860px) {
+                            display: block;
+                        }
+
+                }
+            /* ---------------- */
+
+            /* List menu --------- */
+                .Menu-Mobile {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 40px;
+                    position: fixed;
+                    z-index: 99;
+                    height: 100dvh;
+                    width: 100%;
+                    background-color: color-mix(in srgb, var(--primary-01) 60%, transparent);
+                    backdrop-filter: blur(10px);
+                    -webkit-backdrop-filter: blur(10px);
+                    top: 0;
+                    left: 360%;
+                    right: 0;
+                    list-style-type: none;
+                    transition: left cubic-bezier(0.87, -0.08, 0, 1.05) 0.5s;
+                }
+
+                .Menu-Mobile a{
+                    font-family: 'Body', sans-serif;
+                    font-size: 1rem;
+                    font-weight: 400;
+                    text-decoration: none;
+                    color: var(--light-01);
+
+                    & :hover{
+                        font-weight: bold;
+                        text-decoration: underline;
+                    }
+                }
+
+                .ListMenu{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 36px;
+                }
+                .MenuIcon{
+                    position: absolute;
+                    bottom: 0;
+                }
+            /* ------------------- */
+        /* --------------------------- */
+/* ----------------- */
+
+/* Illust_1 */
+    .Illust_1{
+        width: 100%;
+        max-width: 262px;
+        height: fit-content;
+        position: absolute;
+        right: -80px;
+        top: 80px;
+    }
+/* ------- */
+
+/* Hero-Section */
+    .Hero-Section{
+        width: 100%;
+        height: 538px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .Hero-Section .Container{
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        padding: 140px 20px 0px 20px;
+        position: relative;
+    }
+
+    .Hero-Section .Container .Deco_1{
+        position: absolute;
+        bottom: -92px;
+        left: -40px;
+    }
+
+    .Hero-Section .Container .Content{
+        width: 216px;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 12px;
+        
+        /* Bloc------- */
+            .Bloc{
+                display: flex;
+                justify-content: left;
+                flex-direction: column;
+                gap: 40px;
+
+                .bloc_1{
+                    display: flex;
+                    justify-content: left;
+                    flex-direction: column;
+                    gap: 20px;
+                    color: var(--light-01);
+
+                    h1{
+                        font-family: 'Title', sans-serif;
+                        font-size: 2rem;
+                        font-weight: 900;
+                        line-height: 28px;
+                        letter-spacing: -3%;
+                    }
+                    p{
+                        font-family: 'Body', sans-serif;
+                        font-size: 0.75rem;
+                        letter-spacing: -3%;
+                        /* width: 188px; */
+                    }
+                }
+            }
+        /* ---------- */
+
+        .Indicator{
+            width: 26px;
+        }
+    }
+/* ------------ */
+
+/* Grille-Section */
+    .Grille-Section{
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+    .Grille-Section .Container{
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 50px;
+        padding: 114px 20px 100px 20px;
+    }
+    /* Bloc */
+        .Grille-Section .Container .Bloc{
+            width: 258px;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+
+                h2{
+                    font-family: 'Title', sans-serif;
+                    font-size: 1.5rem;
+                    font-weight: 900;
+                    line-height: 26px;
+                    letter-spacing: -3%;
+                }
+        }
+        /* Filter-container */
+            .Grille-Section .Container .Bloc .Filter-Container{
+                display: flex;
+                justify-content: flex-end;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 14px;
+
+                    .Title{
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        gap: 6px;
+
+                            p{
+                                font-family: 'Body', sans-serif;
+                                font-size: 0.875rem;
+                            }
+                    }
+            }
+        /* --------------- */
+        
+    /* ---- */
+/* ---------------- */
+
+    
+    
+
