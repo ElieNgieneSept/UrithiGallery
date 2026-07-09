@@ -359,7 +359,7 @@
 /* Hero-Section */
     .Hero-Section{
         width: 100%;
-        height: 538px;
+        height: 100svh;
         display: flex;
         justify-content: center;
     }
@@ -375,7 +375,7 @@
 
     .Hero-Section .Container .Deco_1{
         position: absolute;
-        bottom: -92px;
+        bottom: -36px;
         left: -40px;
     }
 
