@@ -51,6 +51,7 @@
 /* Stylisation Button01*/
     .Button01 {
         text-align: center;
+        font-size: clamp(0.875rem, 0.75rem + 0.5556vw, 1.25rem);
         color: var(--ligh-01);
         background-color: var(--black-01);
         border: none;
@@ -126,8 +127,8 @@
     }
 
     .Button01.Large {
-        padding: 14px 14px;
-        max-width: 200px;
+        padding: clamp(14px, 11.1579px + 0.7895vw, 20px);
+        max-width: clamp(172px, 131.2632px + 11.3158vw, 258px);
     }
 
     /*---------------------*/
@@ -204,9 +205,17 @@
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                width: 90%;
-                max-width: 1160px;
+                width: 100%;
+                max-width: clamp(360px, 106.6667px + 70.3704vw, 1120px);
+                padding-left: clamp(0px, 26.6667px + -1.8519vw, 20px);
+                padding-right: clamp(0px, 26.6667px + -1.8519vw, 20px);
                 margin: 0 auto;
+
+                /* Responsive */
+                    /* @media (min-width: 458px) {
+                        width: 84%;
+                    } */
+                /* ---------- */
             }
 
             .Menu-Desktop{
@@ -352,13 +361,24 @@
 /* ----------------- */
 
 /* Illust_1 */
+    .Illust-Container{
+        width: 100%;
+        max-width: 1120px;
+        height: max-content;
+        position: absolute;
+        padding-top: 92px;
+        padding-right: 32px;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        left: 0;
+        right: 0;
+        z-index: -1;
+    }
     .Illust_1{
         width: 100%;
-        max-width: 262px;
-        height: fit-content;
-        position: absolute;
-        right: -80px;
-        top: 92px;
+        max-width: clamp(262px, 183.25px + 21.875vw, 402px);
+        margin-left: clamp(294px, 5.811px + 80.0525vw, 904px);
     }
 /* ------- */
 
@@ -372,11 +392,22 @@
 
     .Hero-Section .Container{
         width: 100%;
+        max-width: clamp(360px, 106.6667px + 70.3704vw, 1122px);
         display: flex;
         justify-content: flex-start;
         flex-direction: column;
-        padding: 140px 20px 0px 20px;
+        /* padding: 140px 20px 0px 20px; */
+        padding-top: 140px;
+        padding-left: clamp(0px, 26.6667px + -1.8519vw, 20px);
         position: relative;
+        
+       
+       
+        /* Responsive */
+            /* @media (min-width: 458px) {
+                padding: 140px 36px 0px 36px;
+            } */
+        /* Responsive */
     }
 
     .Hero-Section .Container .Deco_1{
@@ -386,7 +417,7 @@
     }
 
     .Hero-Section .Container .Content{
-        width: 216px;
+        width: clamp(216px, 144px + 26vw, 432px);
         display: flex;
         justify-content: flex-start;
         flex-direction: column;
@@ -408,16 +439,16 @@
 
                     h1{
                         font-family: 'Title', sans-serif;
-                        font-size: 2rem;
+                        font-size: clamp(2rem, 1.0526rem + 4.2105vw, 4rem);
                         font-weight: 900;
-                        line-height: 28px;
+                        line-height: clamp(26px, 19.3684px + 1.8421vw, 46px);
                         letter-spacing: -3%;
                     }
                     p{
                         font-family: 'Body', sans-serif;
-                        font-size: 0.75rem;
+                        font-size: clamp(0.75rem, 0.6316rem + 0.5263vw, 1rem);
                         letter-spacing: -3%;
-                        /* width: 188px; */
+                        width: clamp(188px, 82.8421px + 28.215vw, 388px);
                     }
                 }
             }
@@ -455,6 +486,12 @@
             gap: 20px;
             position: relative;
             z-index: 1;
+
+            /* Responsive */
+                @media (min-width: 400px) {
+                    width: fit-content;
+                }
+            /* ---------- */
 
                 h2{
                     font-family: 'Title', sans-serif;

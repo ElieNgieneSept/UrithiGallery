@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test de scale fluide avec tan(atan2)</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        section {
+            background-color: #0f172a;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* CONTRAINTE : L element a scaler doit avoir des dimensions FIXES */
+        .mon-element-scale {
+            background: linear-gradient(135deg, #6366f1, #a855f7);
+            border-radius: 16px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            width: 250px;
+            height: 200px;
+            transform-origin: center;
+            scale: clamp(1, 0.003182 * tan(atan2(100vw, 1px)) - 0.1455, 2.4000);
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="mon-element-scale">
+        </div>
+    </section>
+
+</body>
+</html>
