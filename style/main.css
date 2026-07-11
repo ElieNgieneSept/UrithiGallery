@@ -715,7 +715,11 @@
                         letter-spacing: -4%;
                         text-decoration: none;
                         color: var(--ligh-01);
-                        padding: 4px 10px;
+                        padding: 6px 10px;
+
+                            &:hover{
+                                border-bottom: 1px solid var(--primary-02);
+                            }
                     }
             }
         /* ------------- */
