@@ -10,13 +10,36 @@ document.querySelectorAll('.BtnBurger').forEach(btn => {
     });
 });
 
-// Gestion de la sélection des boutons de filtre
+// Gestion de la sélection des boutons de filtre + filtrage dynamique des cartes
+const mapCategorie = {
+    'Tout': 'tout',
+    'Peintures': 'peinture',
+    'Sculptures': 'sculpture',
+    'Mode': 'mode',
+    'Littératures': 'littératures'
+};
+
+const filtrerCartes = (categorie) => {
+    const cartes = document.querySelectorAll('.Card-Container .Card');
+    cartes.forEach(carte => {
+        const cat = carte.getAttribute('data-categorie');
+        if (categorie === 'tout' || cat === categorie) {
+            carte.style.display = '';
+        } else {
+            carte.style.display = 'none';
+        }
+    });
+};
+
 document.querySelectorAll('.Btn-Filter').forEach(btn => {
     const activerFiltre = (e) => {
         // Retirer la classe 'active' de tous les boutons de filtre
         document.querySelectorAll('.Btn-Filter').forEach(b => b.classList.remove('active'));
         // Ajouter la classe 'active' au bouton cliqué
         btn.classList.add('active');
+        // Filtrer les cartes selon la catégorie sélectionnée
+        const categorie = mapCategorie[btn.textContent.trim()] || 'tout';
+        filtrerCartes(categorie);
     };
 
     btn.addEventListener('click', activerFiltre);
@@ -72,3 +95,42 @@ const onScroll = () => {
     }
 };
 window.addEventListener('scroll', onScroll, { passive: true });
+
+// Chargement dynamique des œuvres depuis data.json
+const chargerOeuvres = () => {
+    const container = document.querySelector('.Card-Container');
+    if (!container) return;
+
+    fetch('data.json')
+        .then(response => {
+            if (!response.ok) throw new Error('Fichier data.json introuvable');
+            return response.json();
+        })
+        .then(data => {
+            container.innerHTML = ''; // Vide le conteneur (supprime les cartes statiques)
+            (data.oeuvres || []).forEach(oeuvre => {
+                const carte = document.createElement('div');
+                carte.className = 'Card';
+                carte.setAttribute('data-categorie', oeuvre.categorie);
+                carte.innerHTML = `
+                    <div class="Img-Container">
+                        <img class="Card-Img" src="${oeuvre.image}" alt="${oeuvre.titre}">
+                    </div>
+                    <div class="Infos">
+                        <p class="Title">${oeuvre.titre}</p>
+                        <p class="Size">${oeuvre.taille}</p>
+                    </div>`;
+                container.appendChild(carte);
+            });
+            // Réapplique le filtre actif (par défaut "Tout")
+            const btnActif = document.querySelector('.Btn-Filter.active');
+            const categorie = mapCategorie[btnActif ? btnActif.textContent.trim() : 'Tout'] || 'tout';
+            filtrerCartes(categorie);
+        })
+        .catch(err => {
+            console.error('Erreur lors du chargement des œuvres :', err);
+            // En cas d'échec (ex: ouverture en file://), les cartes statiques restent affichées
+        });
+};
+
+chargerOeuvres();

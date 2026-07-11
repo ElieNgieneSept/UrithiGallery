@@ -1,0 +1,40 @@
+{
+  "oeuvres": [
+    {
+      "titre": "Étre Pensive",
+      "taille": "80x60px",
+      "categorie": "peinture",
+      "image": "./assets/images/EtrePensive_1.jpg"
+    },
+    {
+      "titre": "Composition Abstraite",
+      "taille": "100x80px",
+      "categorie": "peinture",
+      "image": "./assets/images/EtrePensive_1.jpg"
+    },
+    {
+      "titre": "Sculpture en Bronze",
+      "taille": "150x40px",
+      "categorie": "sculpture",
+      "image": "./assets/images/image-2.jpg"
+    },
+    {
+      "titre": "Tenue Traditionnelle",
+      "taille": "90x70px",
+      "categorie": "mode",
+      "image": "./assets/images/image-2.jpg"
+    },
+    {
+      "titre": "Recueil de Poèmes",
+      "taille": "70x50px",
+      "categorie": "littératures",
+      "image": "./assets/images/EtrePensive_1.jpg"
+    },
+    {
+      "titre": "Recueil de Poèmes",
+      "taille": "70x50px",
+      "categorie": "littératures",
+      "image": "./assets/images/EtrePensive_1.jpg"
+    }
+  ]
+}
