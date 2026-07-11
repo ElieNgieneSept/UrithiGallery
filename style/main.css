@@ -46,6 +46,7 @@
         overflow: clip;
     }
 /* .............. */
+/* .............. */
 
 
 /* Stylisation Button01*/
@@ -163,7 +164,7 @@
         /* Desktop ----------- */
             .Navbar {
                 width: 100%;
-                padding: 16px 0px;
+                padding: 32px 0px 16px 0px;
                 position: fixed;
                 background-color: color-mix(in srgb, var(--primary-01) 16%, transparent);
                 backdrop-filter: blur(2px);
@@ -172,7 +173,7 @@
 
                 /* Responsive Tablette */
                     @media (max-width: 860px) {
-                        padding: 10px 0px;
+                        padding: 20px 0px 10px 0px;
                     }
             }
 
@@ -183,7 +184,7 @@
 
             .Navbar a{
                 font-family: 'Body', sans-serif;
-                font-size: 0.75rem;
+                font-size: 0.875rem;
                 font-weight: 400;
                 text-decoration: none;
                 color: var(--light-01);
@@ -230,6 +231,7 @@
             }
         /* -------------------- */
         
+
         /* Mobile ------------------- */
             /* BtnBurger ------ */
                 .BtnBurger {
@@ -366,7 +368,7 @@
         max-width: 1120px;
         height: max-content;
         position: absolute;
-        padding-top: 92px;
+        padding-top: 100px;
         padding-right: 32px;
         display: flex;
         justify-content: center;
@@ -385,7 +387,7 @@
 /* Hero-Section */
     .Hero-Section{
         width: 100%;
-        height: 100svh;
+        height: 688px;
         display: flex;
         justify-content: center;
     }
@@ -396,24 +398,29 @@
         display: flex;
         justify-content: flex-start;
         flex-direction: column;
-        /* padding: 140px 20px 0px 20px; */
-        padding-top: 140px;
+        padding-top: clamp(172px, 111.6535px + 7.874vw, 200px);
         padding-left: clamp(0px, 26.6667px + -1.8519vw, 20px);
         position: relative;
-        
-       
-       
-        /* Responsive */
-            /* @media (min-width: 458px) {
-                padding: 140px 36px 0px 36px;
-            } */
-        /* Responsive */
     }
 
     .Hero-Section .Container .Deco_1{
         position: absolute;
         bottom: -36px;
         left: -40px;
+    }
+    .Hero-Section .Container .Deco_2{
+        display: none;
+
+        /* Responsive */
+            @media (min-width: 600px) {
+                width: clamp(426px, 311.6693px + 31.7585vw, 668px);
+                display: block;
+                position: absolute;
+                bottom: clamp(-119px, 70.9449px + -16.9291vw, 10px);;
+                right: clamp(-148px, 97.937px - -4.4619vw, -114px);
+                z-index: -2;
+            }
+        /* ---------- */
     }
 
     .Hero-Section .Container .Content{
@@ -469,6 +476,8 @@
     }
     .Grille-Section .Container{
         width: 100%;
+        max-width: 1120px;
+        margin: auto;
         display: flex;
         justify-content: flex-start;
         flex-direction: column;
@@ -562,21 +571,23 @@
 
     /* Grille-Container */
         .Grille-Section .Container .Card-Container{
-            display: flex;
-            align-items: flex-start; /* Les colonnes s'étendent seulement selon leur contenu */
-            gap: 12px; /* Espacement horizontal entre les deux colonnes */
+            column-count: 2;
+            column-gap: 12px;
             width: 100%;
 
-            /* Chaque colonne prend exactement 50% de la largeur */
-            .Col{
-                flex: 1;
-                display: flex;
-                flex-direction: column;
-                gap: 20px; /* Espacement vertical entre les cartes */
-            }
+            /* Responsive */
+                @media (min-width: 768px) {
+                    column-count: 3;
+                }
+
+                @media (min-width: 1024px) {
+                    column-count: 4;
+                }
+            /* ---------- */
 
             .Card{
-                width: 100%;
+                break-inside: avoid;
+                margin-bottom: 20px;
                 display: flex;
                 flex-direction: column;
                 gap: 8px;
@@ -763,7 +774,4 @@
     /* ------------------ */
     
 /* ------ */
-
-    
-    
 
