@@ -487,7 +487,7 @@
     }
     /* Bloc */
         .Grille-Section .Container .Bloc{
-            width: 258px;
+            width: clamp(258px, 83.4px + 48.5vw, 452px);
             display: flex;
             justify-content: flex-start;
             flex-direction: column;
@@ -497,8 +497,9 @@
             z-index: 1;
 
             /* Responsive */
-                @media (min-width: 400px) {
-                    width: fit-content;
+                @media (min-width: 858px) {
+                    scale: 1.2;
+                    padding-left: 36px;
                 }
             /* ---------- */
 
