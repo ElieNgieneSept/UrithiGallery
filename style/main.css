@@ -164,17 +164,15 @@
         /* Desktop ----------- */
             .Navbar {
                 width: 100%;
-                padding: 32px 0px 16px 0px;
+                padding-top: 32px;
+                padding-bottom: 16px;
+                padding-left: clamp(0px, 26.6667px + -1.8519vw, 28px);
+                padding-right: clamp(0px, 26.6667px + -1.8519vw, 28px);
                 position: fixed;
                 background-color: color-mix(in srgb, var(--primary-01) 16%, transparent);
                 backdrop-filter: blur(2px);
                 transition: background-color 0.4s ease, backdrop-filter 0.4s ease;
                 z-index: 100;
-
-                /* Responsive Tablette */
-                    @media (max-width: 860px) {
-                        padding: 20px 0px 10px 0px;
-                    }
             }
 
             .Navbar.scrolled {
@@ -208,8 +206,6 @@
                 align-items: center;
                 width: 100%;
                 max-width: clamp(360px, 106.6667px + 70.3704vw, 1120px);
-                padding-left: clamp(0px, 26.6667px + -1.8519vw, 20px);
-                padding-right: clamp(0px, 26.6667px + -1.8519vw, 20px);
                 margin: 0 auto;
 
                 /* Responsive */
@@ -388,6 +384,8 @@
     .Hero-Section{
         width: 100%;
         height: 688px;
+        padding-left: clamp(0px, 26.6667px + -1.8519vw, 28px);
+        padding-right: clamp(0px, 26.6667px + -1.8519vw, 28px);
         display: flex;
         justify-content: center;
     }
@@ -395,11 +393,10 @@
     .Hero-Section .Container{
         width: 100%;
         max-width: clamp(360px, 106.6667px + 70.3704vw, 1122px);
+        padding-top: clamp(172px, 111.6535px + 7.874vw, 200px);
         display: flex;
         justify-content: flex-start;
         flex-direction: column;
-        padding-top: clamp(172px, 111.6535px + 7.874vw, 200px);
-        padding-left: clamp(0px, 26.6667px + -1.8519vw, 20px);
         position: relative;
     }
 
@@ -473,17 +470,20 @@
         display: flex;
         justify-content: flex-start;
         flex-direction: column;
+        padding-left: clamp(0px, 26.6667px + -1.8519vw, 28px);
+        padding-right: clamp(0px, 26.6667px + -1.8519vw, 28px);
     }
     .Grille-Section .Container{
         width: 100%;
-        max-width: 1120px;
+        max-width: clamp(360px, 106.6667px + 70.3704vw, 1122px);
         margin: auto;
+        padding-top: 114px;
+        padding-bottom: 100px;
         display: flex;
         justify-content: flex-start;
         flex-direction: column;
         align-items: flex-start;
         gap: 50px;
-        padding: 114px 20px 100px 20px;
     }
     /* Bloc */
         .Grille-Section .Container .Bloc{
@@ -576,11 +576,11 @@
             width: 100%;
 
             /* Responsive */
-                @media (min-width: 768px) {
+                @media (min-width: 500px) {
                     column-count: 3;
                 }
 
-                @media (min-width: 1024px) {
+                @media (min-width: 868px) {
                     column-count: 4;
                 }
             /* ---------- */
