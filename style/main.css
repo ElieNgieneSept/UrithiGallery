@@ -621,15 +621,6 @@
                                 font-size: 0.75rem;
                                 letter-spacing: -3%;  
                             }
-                            .Badge{
-                                font-size: 0.625rem;
-                                letter-spacing: -3%;
-                                background-color: var(--primary-02);
-                                color: var(--black-01);
-                                padding: 4px 6px;
-                                width: fit-content;
-                                border-radius: 4px;
-                            }
                     }
                 /* ----- */
         }
@@ -776,3 +767,14 @@
     
 /* ------ */
 
+/* Badge */
+    .Badge {
+        font-size: 0.625rem;
+        letter-spacing: -3%;
+        background-color: var(--primary-02);
+        color: var(--black-01);
+        padding: 4px 6px;
+        width: fit-content;
+        border-radius: 4px;
+    }
+/* ----- */
