@@ -53,6 +53,7 @@
     .Button01 {
         text-align: center;
         font-size: clamp(0.875rem, 0.75rem + 0.5556vw, 1.25rem);
+        font-family: 'Body', sans-serif;
         color: var(--ligh-01);
         background-color: var(--black-01);
         border: none;
@@ -109,13 +110,13 @@
     }
 
     /* ⚠️ A utiliser que si le boutton à un changement de couleur au hover */
-    .is-touch-device .Button01:hover {
+    /* .is-touch-device .Button01:hover {
         background-color: var(--black-01);
         -webkit-box-shadow: none;
         box-shadow: none;
         -webkit-transform: none;
         transform: none;
-    }
+    } */
 
     /*------------ */
     /* Sizing ---------- */
@@ -132,32 +133,63 @@
         max-width: clamp(172px, 131.2632px + 11.3158vw, 258px);
     }
 
-    /*---------------------*/
-    .Button01.Primary {
-        background-color: var(--black-01);
-    }
-
-    @media (hover: hover) {
-        .Button01.Primary:hover {
+    /*----- Prmimary -------*/
+        .Button01.Primary {
             background-color: var(--black-01);
-            -webkit-box-shadow: 0 8px 15px rgba(55, 23, 1, 0.4);
-            box-shadow: 0 8px 15px rgba(55, 23, 1, 0.4);
-            -webkit-transform: translateY(-2px);
-            transform: translateY(-2px);
         }
-    }
 
-    .Button01.Primary:active {
-        background-color: var(--black-01);
-        -webkit-box-shadow: none;
-        box-shadow: none;
-        -webkit-transform: scale(0.8);
-        transform: scale(0.8);
-    }
+        @media (hover: hover) {
+            .Button01.Primary:hover {
+                background-color: var(--black-01);
+                -webkit-box-shadow: 0 8px 15px rgba(55, 23, 1, 0.4);
+                box-shadow: 0 8px 15px rgba(55, 23, 1, 0.4);
+                -webkit-transform: translateY(-2px);
+                transform: translateY(-2px);
+            }
+        }
 
-    .Button01.Primary.tape01 {
-        background-color: var(--black-01);
-    }
+        .Button01.Primary:active {
+            background-color: var(--black-01);
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+        }
+
+        .Button01.Primary.tape01 {
+            background-color: var(--black-01);
+        }
+    /* ------------------- */
+
+    /*----- Secondary -------*/
+        .Button01.Secondary {
+            background-color: var(--light-01);
+            color: var(--black-03);
+            font-weight: 600;
+        }
+
+        @media (hover: hover) {
+            .Button01.Secondary:hover {
+                background-color: var(--light-01);
+                -webkit-box-shadow: 0 8px 15px rgba(55, 23, 1, 0.4);
+                box-shadow: 0 8px 15px rgba(55, 23, 1, 0.4);
+                -webkit-transform: translateY(-2px);
+                transform: translateY(-2px);
+            }
+        }
+
+        .Button01.Secondary:active {
+            background-color: var(--light-01);
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+        }
+
+        .Button01.Secondary.tape01 {
+            background-color: var(--light-01);
+        }
+    /* ------------------- */
 /* .................. */
 
 /* Navbar ---------- */
@@ -929,11 +961,22 @@
 .Info-Grid .TitleArtiste{
     font-weight: 600;
 }
+/* ...................... */
+
 
 .Action-Buttons {
+    width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 15px;
+
+    button {
+        min-width: 320px;
+        display: flex;
+        justify-content: center;
+        gap: 6px;
+    }
 }
 
 .Trust-Section {
