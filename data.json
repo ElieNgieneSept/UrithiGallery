@@ -1,52 +1,364 @@
 {
   "oeuvres": [
     {
+      "id": 0,
       "titre": "Étre Pensive",
-      "taille": "80x60px",
+      "taille": "80x60cm",
       "categorie": "peinture",
-      "image": "./assets/images/EtrePensive_1.jpg"
+      "image": "./assets/images/EtrePensive_1.jpg",
+      "artiste": "Koffi Mensah",
+      "type": "Huile sur toile",
+      "prix": 1200,
+      "etat": "Excellent",
+      "encadrement": "Oui",
+      "description": "Une œuvre poignante capturant l'essence de la réflexion intérieure. Les couleurs vibrantes et les coups de pinceau audacieux créent une atmosphère de sérénité et de mélancolie.",
+      "licences": {
+        "web": {
+          "prix": 50,
+          "usage": "Licence Web",
+          "details": [
+            "Utilisation sur sites internet et blogs",
+            "Réseaux sociaux",
+            "Pas de modification autorisée",
+            "Usage non commercial"
+          ]
+        },
+        "media": {
+          "prix": 150,
+          "usage": "Licence Media",
+          "details": [
+            "Utilisation dans la presse numérique et papier",
+            "Émissions TV et Radio",
+            "Crédit obligatoire",
+            "Durée limitée à 2 ans"
+          ]
+        },
+        "commerciale": {
+          "prix": 500,
+          "usage": "Licence Commerciale",
+          "details": [
+            "Campagnes publicitaires",
+            "Produits dérivés",
+            "Droit de modification partiel",
+            "Utilisation mondiale"
+          ]
+        }
+      }
     },
     {
+      "id": 1,
       "titre": "Sculpture en Bronze",
-      "taille": "150x40px",
+      "taille": "150x40cm",
       "categorie": "sculpture",
-      "image": "./assets/images/image-2.jpg"
+      "image": "./assets/images/image-2.jpg",
+      "artiste": "Maman Alice",
+      "type": "Bronze fondu",
+      "prix": 3500,
+      "etat": "Neuf",
+      "encadrement": "Non applicable",
+      "description": "Une sculpture monumentale représentant la force et la résilience. Le travail sur les textures du bronze apporte un réalisme saisissant et une profondeur spirituelle.",
+      "licences": {
+        "web": {
+          "prix": 70,
+          "usage": "Licence Web",
+          "details": [
+            "Utilisation sur sites internet et blogs",
+            "Réseaux sociaux",
+            "Pas de modification autorisée",
+            "Usage non commercial"
+          ]
+        },
+        "media": {
+          "prix": 200,
+          "usage": "Licence Media",
+          "details": [
+            "Utilisation dans la presse numérique et papier",
+            "Émissions TV et Radio",
+            "Crédit obligatoire",
+            "Durée limitée à 2 ans"
+          ]
+        },
+        "commerciale": {
+          "prix": 700,
+          "usage": "Licence Commerciale",
+          "details": [
+            "Campagnes publicitaires",
+            "Produits dérivés",
+            "Droit de modification partiel",
+            "Utilisation mondiale"
+          ]
+        }
+      }
     },
     {
+      "id": 2,
       "titre": "Composition Abstraite",
-      "taille": "100x80px",
+      "taille": "100x80cm",
       "categorie": "peinture",
-      "image": "./assets/images/EtrePensive_1.jpg"
+      "image": "./assets/images/EtrePensive_1.jpg",
+      "artiste": "Jean-Paul Art",
+      "type": "Acrylique sur toile",
+      "prix": 800,
+      "etat": "Très bon",
+      "encadrement": "Non",
+      "description": "Une exploration des formes et des couleurs qui défie la perspective traditionnelle. Cette œuvre invite le spectateur à un voyage intérieur subjectif.",
+      "licences": {
+        "web": {
+          "prix": 40,
+          "usage": "Licence Web",
+          "details": [
+            "Utilisation sur sites internet et blogs",
+            "Réseaux sociaux",
+            "Pas de modification autorisée",
+            "Usage non commercial"
+          ]
+        },
+        "media": {
+          "prix": 120,
+          "usage": "Licence Media",
+          "details": [
+            "Utilisation dans la presse numérique et papier",
+            "Émissions TV et Radio",
+            "Crédit obligatoire",
+            "Durée limitée à 2 ans"
+          ]
+        },
+        "commerciale": {
+          "prix": 400,
+          "usage": "Licence Commerciale",
+          "details": [
+            "Campagnes publicitaires",
+            "Produits dérivés",
+            "Droit de modification partiel",
+            "Utilisation mondiale"
+          ]
+        }
+      }
     },
     {
+      "id": 3,
       "titre": "Recueil de Poèmes",
-      "taille": "70x50px",
+      "taille": "70x50cm",
       "categorie": "littératures",
-      "image": "./assets/images/EtrePensive_1.jpg"
+      "image": "./assets/images/EtrePensive_1.jpg",
+      "artiste": "Sonia Lumumba",
+      "type": "Manuscrit original",
+      "prix": 300,
+      "etat": "Excellent",
+      "encadrement": "Oui (sous verre)",
+      "description": "Un recueil unique de poèmes traitant de l'exil et de l'identité. Le texte est accompagné d'illustrations à l'encre de Chine.",
+      "licences": {
+        "web": {
+          "prix": 30,
+          "usage": "Licence Web",
+          "details": [
+            "Utilisation de citations courtes",
+            "Réseaux sociaux",
+            "Pas de modification autorisée",
+            "Usage non commercial"
+          ]
+        },
+        "media": {
+          "prix": 100,
+          "usage": "Licence Media",
+          "details": [
+            "Utilisation dans la presse",
+            "Émissions culturelles",
+            "Crédit obligatoire",
+            "Durée limitée"
+          ]
+        },
+        "commerciale": {
+          "prix": 300,
+          "usage": "Licence Commerciale",
+          "details": [
+            "Édition commerciale",
+            "Publicités",
+            "Droit de modification limité",
+            "Utilisation mondiale"
+          ]
+        }
+      }
     },
     {
+      "id": 4,
       "titre": "Tenue Traditionnelle",
-      "taille": "90x70px",
+      "taille": "90x70cm",
       "categorie": "mode",
-      "image": "./assets/images/image-2.jpg"
+      "image": "./assets/images/image-2.jpg",
+      "artiste": "Maître Tissier",
+      "type": "Textile et Perles",
+      "prix": 600,
+      "etat": "Neuf",
+      "encadrement": "Non applicable",
+      "description": "Une pièce maîtresse de la mode traditionnelle, utilisant des techniques de tissage ancestrales avec des motifs symboliques de la région.",
+      "licences": {
+        "web": {
+          "prix": 60,
+          "usage": "Licence Web",
+          "details": [
+            "Utilisation sur sites mode et culture",
+            "Réseaux sociaux",
+            "Pas de modification autorisée",
+            "Usage non commercial"
+          ]
+        },
+        "media": {
+          "prix": 180,
+          "usage": "Licence Media",
+          "details": [
+            "Magazines de mode",
+            "Documentaires",
+            "Crédit obligatoire",
+            "Durée limitée"
+          ]
+        },
+        "commerciale": {
+          "prix": 600,
+          "usage": "Licence Commerciale",
+          "details": [
+            "Campagnes de marque",
+            "Produits dérivés",
+            "Droit de modification partiel",
+            "Utilisation mondiale"
+          ]
+        }
+      }
     },
     {
-      "titre": "Tenue Traditionnelle",
-      "taille": "90x70px",
-      "categorie": "mode",
-      "image": "./assets/images/image-2.jpg"
+      "id": 5,
+      "titre": "Le Regard du Roi",
+      "taille": "120x90cm",
+      "categorie": "peinture",
+      "image": "./assets/images/EtrePensive_1.jpg",
+      "artiste": "Bakongo Art",
+      "type": "Huile sur toile",
+      "prix": 2100,
+      "etat": "Excellent",
+      "encadrement": "Oui",
+      "description": "Une représentation majestueuse de la royauté traditionnelle, mettant en avant la sagesse et l'autorité à travers un jeu de lumières contrasté.",
+      "licences": {
+        "web": {
+          "prix": 60,
+          "usage": "Licence Web",
+          "details": [
+            "Utilisation sur sites web",
+            "Réseaux sociaux",
+            "Pas de modification",
+            "Usage non commercial"
+          ]
+        },
+        "media": {
+          "prix": 180,
+          "usage": "Licence Media",
+          "details": [
+            "Presse numérique",
+            "Émissions TV",
+            "Crédit obligatoire",
+            "Durée 2 ans"
+          ]
+        },
+        "commerciale": {
+          "prix": 600,
+          "usage": "Licence Commerciale",
+          "details": [
+            "Publicité",
+            "Produits dérivés",
+            "Modif partiel",
+            "Mondial"
+          ]
+        }
+      }
     },
     {
-      "titre": "Tenue Traditionnelle",
-      "taille": "90x70px",
-      "categorie": "mode",
-      "image": "./assets/images/image-2.jpg"
+      "id": 6,
+      "titre": "L'Esprit du Fleuve",
+      "taille": "60x60cm",
+      "categorie": "sculpture",
+      "image": "./assets/images/image-2.jpg",
+      "artiste": "Lutumba Stone",
+      "type": "Pierre sculptée",
+      "prix": 1800,
+      "etat": "Très bon",
+      "encadrement": "Non applicable",
+      "description": "Une œuvre organique évoquant le mouvement fluide du fleuve Congo, sculptée dans une pierre locale rare.",
+      "licences": {
+        "web": {
+          "prix": 50,
+          "usage": "Licence Web",
+          "details": [
+            "Sites web",
+            "Réseaux sociaux",
+            "Pas de modification",
+            "Non commercial"
+          ]
+        },
+        "media": {
+          "prix": 140,
+          "usage": "Licence Media",
+          "details": [
+            "Presse",
+            "TV/Radio",
+            "Crédit obligatoire",
+            "Durée 2 ans"
+          ]
+        },
+        "commerciale": {
+          "prix": 450,
+          "usage": "Licence Commerciale",
+          "details": [
+            "Publicité",
+            "Produits dérivés",
+            "Modif partiel",
+            "Mondial"
+          ]
+        }
+      }
     },
     {
-      "titre": "Recueil de Poèmes",
-      "taille": "70x50px",
-      "categorie": "littératures",
-      "image": "./assets/images/EtrePensive_1.jpg"
+      "id": 7,
+      "titre": "Symphonie Urbaine",
+      "taille": "110x70cm",
+      "categorie": "peinture",
+      "image": "./assets/images/EtrePensive_1.jpg",
+      "artiste": "Kinshasa Street",
+      "type": "Acrolylique et Collage",
+      "prix": 950,
+      "etat": "Neuf",
+      "encadrement": "Non",
+      "description": "Une œuvre contemporaine capturant le chaos organisé et l'énergie débordante des rues de Kinshasa.",
+      "licences": {
+        "web": {
+          "prix": 40,
+          "usage": "Licence Web",
+          "details": [
+            "Sites web",
+            "Réseaux sociaux",
+            "Pas de modification",
+            "Non commercial"
+          ]
+        },
+        "media": {
+          "prix": 110,
+          "usage": "Licence Media",
+          "details": [
+            "Presse",
+            "TV/Radio",
+            "Crédit obligatoire",
+            "Durée 2 ans"
+          ]
+        },
+        "commerciale": {
+          "prix": 380,
+          "usage": "Licence Commerciale",
+          "details": [
+            "Publicité",
+            "Produits dérivés",
+            "Modif partiel",
+            "Mondial"
+          ]
+        }
+      }
     }
   ]
 }

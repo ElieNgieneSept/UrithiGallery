@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="icon" href="./assets/images/Favicon.svg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détails de l'Œuvre - Art Gallery</title>
+    <link rel="stylesheet" href="style/main.css">
+</head>
+<body>
+    <main>
+        <!-- Navbar (Copied from home.html) -->
+        <nav class="Navbar">
+            <div class="Navbar-Container">
+                <img class="Logo-img" src="./assets/images/Logo-ArtGallery.svg" alt="Logo-ArtGallery">
+                <ul class="Menu-Desktop">
+                    <li><a href="home.html">Accueil</a></li>
+                    <li><a href="home.html#Grille-Section">Œuvres</a></li>
+                    <li><a href="#">À propos</a></li>
+                    <li><a href="#Footer">Contact</a></li>
+                </ul>
+                <button class="BtnBurger">
+                    <svg viewBox="0 0 64 48">
+                        <path d="M19,15 L45,15 C70,15 58,-2 49.0177126,7 L19,37"></path>
+                        <path d="M19,24 L45,24 C61.2371586,24 57,49 41,33 L32,24"></path>
+                        <path d="M45,33 L19,33 C-8,33 6,-2 22,14 L45,37"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        <div class="Menu-Mobile">
+            <div class="ListMenu">
+                <li><a href="home.html">Accueil</a></li>
+                <li><a href="home.html#Grille-Section">Œuvres</a></li>
+                <li><a href="#">À propos</a></li>
+                <li><a href="#Footer">Contact</a></li>
+            </div>
+        </div>
+
+        <!-- Details Section -->
+            <section class="Details-Page Container">
+                <!-- Back Button -->
+                <div class="Back-Nav">
+                    <a href="home.html" class="Btn-Back">← Retour à la galerie</a>
+                </div>
+
+                <!-- 1. Header: Image and Title -->
+                <div class="Details-Header">
+                    <div class="Details-Image-Container">
+                        <img id="detail-image" src="" alt="Image de l'œuvre">
+                    </div>
+                    <h1 id="detail-title">Titre de l'œuvre</h1>
+                </div>
+
+            <!-- Tabs Navigation -->
+            <div class="Main-Tabs">
+                <div class="Tab-Btn active" data-tab="original">Original</div>
+                <div class="Tab-Btn" data-tab="licences">Licences</div>
+            </div>
+
+            <!-- 2. Content: Original Tab -->
+            <div id="tab-original" class="Tab-Content active">
+                <!-- Section 1: Basic Info -->
+                <div class="Details-Basic-Info">
+                    <div class="Info-Grid">
+                        <p><strong>Catégorie:</strong> <span id="info-category">-</span></p>
+                        <p><strong>Artiste:</strong> <span id="info-artist">-</span></p>
+                        <p><strong>Type d'œuvre:</strong> <span id="info-type">-</span></p>
+                        <p><strong>Taille:</strong> <span id="info-size">-</span></p>
+                        <p><strong>Prix:</strong> <span id="info-price">-</span> USD</p>
+                    </div>
+                    <div class="Action-Buttons">
+                        <button class="Button01 Primary Large">Passer commande</button>
+                        <button class="Button01 Secondary Large">Nous faire une offre</button>
+                    </div>
+                </div>
+
+                <!-- Trust Section -->
+                <div class="Trust-Section">
+                    <p>✅ Livraison Standard ou Expresse selon votre convenance</p>
+                    <p>🌍 Expédition dans le monde entier</p>
+                    <p>🔒 Paiement sécurisé et garanti</p>
+                </div>
+
+                <!-- Section with 3 sub-tabs -->
+                <div class="Sub-Tabs-Container">
+                    <div class="Sub-Tabs-Nav">
+                        <button class="Sub-Tab-Btn active" data-subtab="livraison">Livraison</button>
+                        <button class="Sub-Tab-Btn" data-subtab="garantie">Garantie</button>
+                        <button class="Sub-Tab-Btn" data-subtab="paiement">Paiement</button>
+                    </div>
+                    <div class="Sub-Tabs-Content">
+                        <div id="subtab-livraison" class="Sub-Tab-Pane active">
+                            <p>Informations sur la livraison : Livraison Standard (7-14 jours) ou Expresse (3-5 jours) disponibles partout dans le monde.</p>
+                        </div>
+                        <div id="subtab-garantie" class="Sub-Tab-Pane">
+                            <p>Informations sur la garantie : Toutes nos œuvres originales sont certifiées authentiques et bénéficient d'une garantie de transport.</p>
+                        </div>
+                        <div id="subtab-paiement" class="Sub-Tab-Pane">
+                            <p>Informations sur le paiement : Nous acceptons les virements bancaires, cartes de crédit et PayPal.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 3: State, Frame, Description -->
+                <div class="Details-Extra-Info">
+                    <div class="Extra-Grid">
+                        <p><strong>État de l'œuvre:</strong> <span id="info-state">-</span></p>
+                        <p><strong>Encadrement:</strong> <span id="info-frame">-</span></p>
+                    </div>
+                    <div class="Description-Box">
+                        <h3>Description</h3>
+                        <p id="info-description">-</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Content: Licences Tab -->
+            <div id="tab-licences" class="Tab-Content">
+                <!-- License Selection Block -->
+                <div class="License-Selection-Box">
+                    <p>Choisissez le type de licence adaptée à vos besoins pour utiliser cette œuvre numériquement.</p>
+                    <div class="License-Option">
+                        <p>Type de licence :</p>
+                        <div class="License-Radio-Group">
+                            <label class="License-Radio-Label">
+                                <input type="radio" name="license-type" value="web" checked>
+                                <span class="Custom-Radio"></span>
+                                Licence Web
+                            </label>
+                            <label class="License-Radio-Label">
+                                <input type="radio" name="license-type" value="media">
+                                <span class="Custom-Radio"></span>
+                                Licence Media
+                            </label>
+                            <label class="License-Radio-Label">
+                                <input type="radio" name="license-type" value="commerciale">
+                                <span class="Custom-Radio"></span>
+                                Licence Commerciale
+                            </label>
+                        </div>
+                    </div>
+                    <div class="License-Price-Display">
+                        Prix de la licence : <strong id="license-price">0</strong> USD
+                    </div>
+                    <button class="Button01 Primary Large">Acheter la licence</button>
+                </div>
+
+                <!-- License Usage Block -->
+                <div class="License-Usage-Box">
+                    <h3>Usage : <span id="usage-title">Licence Web</span></h3>
+                    <ul id="usage-details-list">
+                        <!-- Filled dynamically -->
+                    </ul>
+                    <div class="Custom-License-Notice">
+                        <p><strong>Licences personnalisées</strong></p>
+                        <p>Si votre utilisation n'est pas couverte par nos licences standard, contactez-nous pour une licence personnalisée.</p>
+                        <button class="Button01 Secondary">Nous contacter</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer (Copied from home.html) -->
+        <footer class="Footer" id="Footer">
+            <img class="Deco_2" src="./assets/images/Deco_2.svg" alt="Deco_2">
+            <div class="Container">
+                <div class="Bloc_1">
+                    <div class="bloc">
+                        <div class="Grp">
+                            <img class="Logo" src="./assets/images/Logo-ArtGallery.svg" alt="">
+                            <p>Notre Culture, notre Art</p>
+                        </div>
+                        <p>.........................................................................................................</p>
+                    </div>
+                    <div class="Link-Container">
+                        <a class="Link" href="home.html">Accueil</a>
+                        <a class="Link" href="home.html#Grille-Section">Œuvres</a>
+                        <a class="Link" href="#">À propos</a>
+                        <a class="Link" href="#Footer">Contact</a>
+                        <a class="Link" href="#">Mentions légales</a>
+                        <a class="Link" href="#">Conditions de livraison</a>
+                    </div>
+                </div>
+                <div class="Bloc_2">
+                    <div class="Contact">
+                        <div class="Mail">
+                            <img src="./assets/images/Icon-Mail.svg" alt="">
+                            <p>contact@stepentreprise.com</p>
+                        </div>
+                        <div class="Number">
+                            <img src="./assets/images/Icon-WhatsApp.svg" alt="">
+                            <p>+243 99 32 23 918</p>
+                        </div>
+                    </div>
+                    <div class="SocialMedia">
+                        <a href="https://www.instagram.com/urithi_plus/"><img src="./assets/images/Icon-IG.svg" alt=""></a>
+                        <a href="https://www.tiktok.com/@urithiplus"><img src="./assets/images/Icon-Tik.svg" alt=""></a>
+                        <a href="https://www.facebook.com/STEPUrithi"><img src="./assets/images/Icon-FB.svg" alt=""></a>
+                    </div>
+                    <p class="Copyright">© 2026 STEP Plus - Urithi+ | Art Gallery. Tous droits réservés.</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="script/details.js"></script>
+    <script src="script/BtnTape.js"></script>
+</body>
+</html>

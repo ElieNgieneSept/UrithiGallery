@@ -112,6 +112,7 @@ const chargerOeuvres = () => {
                 const carte = document.createElement('div');
                 carte.className = 'Card';
                 carte.setAttribute('data-categorie', oeuvre.categorie);
+                carte.style.cursor = 'pointer';
                 carte.innerHTML = `
                     <div class="Img-Container">
                         <img class="Card-Img" src="${oeuvre.image}" alt="${oeuvre.titre}">
@@ -120,6 +121,11 @@ const chargerOeuvres = () => {
                         <p class="Title">${oeuvre.titre}</p>
                         <p class="Size">${oeuvre.taille}</p>
                     </div>`;
+                
+                carte.addEventListener('click', () => {
+                    window.location.href = `details.html?id=${oeuvre.id}`;
+                });
+                
                 container.appendChild(carte);
             });
             // Réapplique le filtre actif (par défaut "Tout")
