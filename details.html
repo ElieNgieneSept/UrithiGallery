@@ -65,11 +65,17 @@
                 <!-- Section 1: Basic Info -->
                 <div class="Details-Basic-Info">
                     <div class="Info-Grid">
-                        <p class="Badge" id="info-category"></p>
-                        <p><strong>Artiste:</strong> <span id="info-artist">-</span></p>
-                        <p><strong>Type d'œuvre:</strong> <span id="info-type">-</span></p>
-                        <p><strong>Taille:</strong> <span id="info-size">-</span></p>
-                        <p><strong>Prix:</strong> <span id="info-price">-</span> USD</p>
+                        <div class="bloc_1">
+                            <p class="Badge" id="info-category"></p>
+                            <p class="TitleArtiste">Artiste: <span id="info-artist">-</span></p>
+                            <p id="info-type"></p>
+                            <p>Taille: <span id="info-size">-</span></p>
+                        </div>
+
+                        <div class="Price">
+                            <p>Vendue à partir de :</p>
+                            <p class="Price-Amount"><span id="info-price">-</span> USD</p>
+                        </div>
                     </div>
                     <div class="Action-Buttons">
                         <button class="Button01 Primary Large">Passer commande</button>

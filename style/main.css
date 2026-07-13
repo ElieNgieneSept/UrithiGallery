@@ -844,7 +844,7 @@
     .Main-Tabs {
         display: flex;
         gap: 20px;
-        margin-bottom: 40px;
+        margin-bottom: 20px;
     }
 
     .Tab-Btn {
@@ -866,21 +866,22 @@
     }
 /* ------------- */
 
-/* Content Containers */
-.Tab-Content {
-    display: none;
-    flex-direction: column;
-    animation: fadeIn 0.4s ease;
-}
+/* Config tab content */
+    .Tab-Content {
+        display: none;
+        flex-direction: column;
+        animation: fadeIn 0.4s ease;
+    }
 
-.Tab-Content.active {
-    display: flex;
-}
+    .Tab-Content.active {
+        display: flex;
+    }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+/* ----------------- */
 
 /* Original Tab Styles */
 .Details-Basic-Info {
@@ -891,11 +892,42 @@
     margin-bottom: 40px;
 }
 
-.Info-Grid p {
-    margin-bottom: 10px;
-    font-size: 16px;
-    padding-bottom: 5px;
-    color: var(--light-01);
+.Info-Grid {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+        p {
+            font-size: 0.875rem;
+            color: var(--light-01);
+        }
+}
+
+.Info-Grid .bloc_1{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.Info-Grid .Price{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+
+        p{
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+
+        .Price-Amount{
+            font-size: 1.625rem;
+            font-weight: 900;
+        }
+}
+
+.Info-Grid .TitleArtiste{
+    font-weight: 600;
 }
 
 .Action-Buttons {
