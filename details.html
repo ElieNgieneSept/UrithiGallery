@@ -45,25 +45,27 @@
                 </div>
 
                 <!-- 1. Header: Image and Title -->
-                <div class="Details-Header">
-                    <div class="Details-Image-Container">
-                        <img id="detail-image" src="" alt="Image de l'œuvre">
+                    <div class="Details-Header">
+                        <div class="Details-Image-Container">
+                            <img id="detail-image" src="" alt="Image de l'œuvre">
+                        </div>
+                        <h1 id="detail-title">Titre de l'œuvre</h1>
                     </div>
-                    <h1 id="detail-title">Titre de l'œuvre</h1>
-                </div>
+                <!-- ------------- -->
 
-            <!-- Tabs Navigation -->
-            <div class="Main-Tabs">
-                <div class="Tab-Btn active" data-tab="original">Original</div>
-                <div class="Tab-Btn" data-tab="licences">Licences</div>
-            </div>
+                <!-- Tabs Navigation -->
+                    <div class="Main-Tabs">
+                        <div class="Tab-Btn active" data-tab="original">Original</div>
+                        <div class="Tab-Btn" data-tab="licences">Licences</div>
+                    </div>
+                <!-- ------------- -->
 
             <!-- 2. Content: Original Tab -->
             <div id="tab-original" class="Tab-Content active">
                 <!-- Section 1: Basic Info -->
                 <div class="Details-Basic-Info">
                     <div class="Info-Grid">
-                        <p><strong>Catégorie:</strong> <span id="info-category">-</span></p>
+                        <p class="Badge" id="info-category"></p>
                         <p><strong>Artiste:</strong> <span id="info-artist">-</span></p>
                         <p><strong>Type d'œuvre:</strong> <span id="info-type">-</span></p>
                         <p><strong>Taille:</strong> <span id="info-size">-</span></p>
@@ -206,5 +208,7 @@
 
     <script src="script/details.js"></script>
     <script src="script/BtnTape.js"></script>
+    <script src="script/main.js"></script>
+    <script src="script/details.js"></script>
 </body>
 </html>
