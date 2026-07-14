@@ -987,19 +987,30 @@
 
     /* Trust Section */
         .Trust-Section {
-            background: #f9f9f9;
-            padding: 20px;
-            border: 1px solid #000;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
             margin-bottom: 40px;
-            text-align: center;
-            font-style: italic;
-            color: #000;
+
+                > p{
+                    font-size: 0.625rem;
+                    letter-spacing: -3%;
+                }
         }
 
+        .Trust-Section .List{
+            display: flex;
+            align-items: center;
+            gap: 2px;
+            font-size: 0.75rem;
+        }
     /* ------------- */
-
 /* ...................... */
 
+/* Details Section */
+
+
+/* -------------- */
 
 
 .Sub-Tabs-Container {
