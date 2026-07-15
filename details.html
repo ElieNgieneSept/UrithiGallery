@@ -68,7 +68,7 @@
                             <div class="Info-Grid">
                                 <div class="bloc_1">
                                     <p class="Badge" id="info-category"></p>
-                                    <p class="TitleArtiste">Artiste: <span id="info-artist">-</span></p>
+                                    <p class="TitleArtiste">Artiste: <span id="info-artist-basic">-</span></p>
                                     <p id="info-type"></p>
                                     <p>Taille: <span id="info-size">-</span></p>
                                 </div>
@@ -167,6 +167,7 @@
                         <div class="Sub-Tab-Btn" data-subtab="garantie">Garantie</div>
                         <div class="Sub-Tab-Btn" data-subtab="paiement">Paiement</div>
                     </div>
+
                     <div class="Sub-Tabs-Content">
                         <div id="subtab-livraison" class="Sub-Tab-Pane active">
                             <p>Expédié par le vendeur : L'expédition de cette œuvre est assurée directement par le vendeur. Douanes non incluses.</p>
@@ -201,14 +202,29 @@
         
                 <!-- Section 3: State, Frame, Description -->
                 <div class="Details-Extra-Info">
-                    <div class="Extra-Grid">
-                        <p><strong>État de l'œuvre:</strong> <span id="info-state">-</span></p>
-                        <p><strong>Encadrement:</strong> <span id="info-frame">-</span></p>
+                    <!-- Etat -->
+                    <div class="Grid">
+                        <h4>État de l'œuvre</h4>
+                        <p id="info-state">-</p>
                     </div>
+                    <!-- Encadrement -->
+                     <div class="Grid">
+                        <h4>Encadrement</h4>
+                        <p id="info-frame">-</p>
+                    </div>
+                    <!-- Description -->
                     <div class="Description-Box">
-                        <h3>Description</h3>
+                        <h2>Description de l'œuvre</h2>
                         <p id="info-description">-</p>
                     </div>
+                    <!-- Tag artiste -->
+                     <div class="TagArtiste-Container">
+                        <img id="artist-image" src="" alt="">
+                        <div class="Title">
+                            <h4 id="info-artist">-</h4>
+                            <p id="category-artist">-</p>
+                        </div>
+                     </div>
                 </div>
             </div>
         </Section>
