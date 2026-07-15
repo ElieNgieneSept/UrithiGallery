@@ -1008,50 +1008,81 @@
 /* ...................... */
 
 /* Details Section */
+    .Details-Section{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .Details-Section .Container{
+        width: 100%;
+        max-width: 1120px;
+        padding-left: clamp(0px, 26.6667px + -1.8519vw, 28px);
+        padding-right: clamp(0px, 26.6667px + -1.8519vw, 28px);
+    }
 
+    .Sub-Tabs-Container {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
 
+        .More-Info{
+            font-size: 0.875rem;
+            text-decoration: underline;
+            list-style: none;
+            cursor: pointer;
+            margin-bottom: 10px;
+
+            /* Masque la flèche spécifique à Safari */
+            ::-webkit-details-marker {
+                display: none;
+            }
+        }
+    }
+
+    /* Boutton Nav */
+        .Sub-Tabs-Nav {
+            display: flex;
+            justify-content: flex-start;
+            gap: 16px;
+            border-bottom: 2px solid var(--light-01);
+        }
+        .Sub-Tab-Btn {
+            padding: 8px;
+            cursor: pointer;
+            font-weight: 300;
+            color: var(--light-01);
+            background-color: transparent;
+            transition: all 0.3s;
+        }
+        
+        .Sub-Tab-Btn.active {
+            font-weight: 400;
+            background-color: var(--light-01);
+            color: var(--primary-01);
+            border-radius: 10px 10px 0px 0px;
+        }
+    /* ------------ */
+
+    .Sub-Tab-Pane {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 10px;
+
+            p{
+                font-size: 0.875rem;
+            }
+    }
+    .Sub-Tab-Pane.active {
+        display: flex;
+    }
 /* -------------- */
 
 
-.Sub-Tabs-Container {
-    margin-bottom: 50px;
-}
 
-.Sub-Tabs-Nav {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 20px;
-}
 
-.Sub-Tab-Btn {
-    background: none;
-    border: 1px solid #ccc;
-    padding: 5px 15px;
-    cursor: pointer;
-    font-size: 13px;
-    transition: all 0.2s;
-    color: #000;
-}
-
-.Sub-Tab-Btn.active {
-    background: #000;
-    color: #fff;
-    border-color: #000;
-}
-
-.Sub-Tab-Pane {
-    display: none;
-    padding: 20px;
-    border: 1px solid #000;
-    background: #fff;
-    text-align: center;
-    color: #000;
-}
-
-.Sub-Tab-Pane.active {
-    display: block;
-}
 
 .Details-Extra-Info {
     margin-top: 40px;
