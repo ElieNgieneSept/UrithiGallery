@@ -250,7 +250,7 @@
                 justify-content: space-between;
                 align-items: center;
                 width: 100%;
-                max-width: min(80vw, 1120px);
+                max-width: min(88vw, 1120px);
                 margin: 0 auto;
 
                 /* Responsive */
