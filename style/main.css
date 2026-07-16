@@ -961,6 +961,29 @@
     }
 /* ----------------- */
 
+/* Action-Buttons */
+    .Action-Buttons {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        a{
+            color: var(--light-01);
+            text-decoration: none;
+        }
+    
+        button {
+            width: 100% !important;
+            max-width: 360px !important;
+            display: flex;
+            justify-content: center;
+            gap: 6px;
+            padding: 18px !important;
+        }
+    }
+/* -------------- */
+
 /* Original Tab Styles */
     /* Details-Basic-Info */
         .Details-Basic-Info {
@@ -1010,24 +1033,6 @@
                 font-weight: 600;
             }
         /* --------- */
-        
-        /* Action-Buttons */
-            .Action-Buttons {
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                gap: 15px;
-            
-                button {
-                    width: 100% !important;
-                    max-width: 360px !important;
-                    display: flex;
-                    justify-content: center;
-                    gap: 6px;
-                    padding: 18px !important;
-                }
-            }
-        /* -------------- */
     /* ------------------ */
 
     /* Trust Section */
@@ -1178,7 +1183,6 @@
     }
 
 /* ----------------- */
-
 
 /* Licences Tab Styles */
     .License-Selection-Box{
