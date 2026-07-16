@@ -976,10 +976,12 @@
                 gap: 15px;
             
                 button {
-                    min-width: 320px;
+                    width: 100% !important;
+                    max-width: 360px !important;
                     display: flex;
                     justify-content: center;
                     gap: 6px;
+                    padding: 18px !important;
                 }
             }
         /* -------------- */
@@ -1212,31 +1214,26 @@
     /* ------- */
 
     /* Price */
-        
+        .License-Price-Display {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            margin-bottom: 20px;
 
+            font-size: 0.875rem;
+            font-weight: 600;
+
+                .Price{
+                    font-size: 1.625rem;
+                    font-weight: 900;
+                }
+        }
     /* ----- */
+
+
 /* ------------------ */
 
 
-
-
-
-
-
-
-#license-select {
-    padding: 8px;
-    border: 1px solid #000;
-    background: #fff;
-    font-family: inherit;
-}
-
-.License-Price-Display {
-    font-size: 24px;
-    margin-bottom: 20px;
-    text-align: center;
-    color: #000;
-}
 
 #usage-details-list {
     list-style: none;
@@ -1256,5 +1253,10 @@
     border-top: 1px solid #000;
     text-align: center;
     color: #000;
+}
+
+.Divider{
+    font-size: 0.625rem;
+    letter-spacing: -3%;
 }
 /* ========================================================================== */
