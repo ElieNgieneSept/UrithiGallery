@@ -45,6 +45,12 @@
         position: relative;
         overflow: clip;
     }
+
+    main{
+        width: min(88vw, 1120px);
+        margin: 0 auto;
+        position: relative;
+    }
 /* .............. */
 
 
@@ -75,6 +81,10 @@
         -ms-touch-action: manipulation;
         touch-action: manipulation;
         /* bloquer les manipulation pas importante tels que le double-tap pour zoom*/
+
+            img{
+                width: 18px;
+            }
     }
 
     .Button01:disabled {
@@ -197,13 +207,15 @@
                 width: 100%;
                 padding-top: 32px;
                 padding-bottom: 16px;
-                padding-left: clamp(0px, 26.6667px + -1.8519vw, 28px);
-                padding-right: clamp(0px, 26.6667px + -1.8519vw, 28px);
+                /* padding-left: clamp(0px, 26.6667px + -1.8519vw, 28px);
+                padding-right: clamp(0px, 26.6667px + -1.8519vw, 28px); */
                 position: fixed;
                 background-color: color-mix(in srgb, var(--primary-01) 16%, transparent);
                 backdrop-filter: blur(2px);
                 transition: background-color 0.4s ease, backdrop-filter 0.4s ease;
                 z-index: 100;
+                left: 0;
+                right: 0;
             }
 
             .Navbar.scrolled {
@@ -238,7 +250,7 @@
                 justify-content: space-between;
                 align-items: center;
                 width: 100%;
-                max-width: clamp(360px, 106.6667px + 70.3704vw, 1120px);
+                max-width: min(80vw, 1120px);
                 margin: 0 auto;
 
                 /* Responsive */
@@ -823,16 +835,27 @@
 /* ========================== DETAILS PAGE - Monochrome Base ========================== */
 /* Partie */
     .Details-Page {
-        max-width: 1120px;
-        padding-top: 120px;
-        padding-left: clamp(0px, 26.6667px + -1.8519vw, 28px);
-        padding-right: clamp(0px, 26.6667px + -1.8519vw, 28px);
+        width: 100%;
+        padding-top: 20px;
         color: var(--ligh-01);
         font-family: 'Body', sans-serif;
     }
+    .Details-Page .Container{
+        display: flex;
+        flex-direction: column;
+
+        @media (min-width: 700px){
+            display: flex;
+            flex-direction: row;
+            gap: 40px;
+        }
+    }
 
     .Back-Nav {
+        width: 100%;
+        margin: auto;
         margin-bottom: 12px;
+        padding-top: 140px;
     }
 
     .Btn-Back {
@@ -849,12 +872,34 @@
     }
 
     .Details-Header {
+        width: 100%;
         margin-bottom: 20px;
+
+        @media (min-width: 700px){
+            width: 50%;
+        }
+    }
+    .Details-Header .Deco_3{
+        display: none;
+        width: min(34vw, 450px);
+        margin-top: 40px;
+        margin-bottom: 40px;
+
+        @media (min-width: 700px){
+            display: inline-block;
+        }
+    }
+    .Details-Page .Container .Details{
+        width: 100%;
+
+        @media (min-width: 700px){
+            width: 50%;
+        }
     }
 
     .Details-Image-Container {
         width: 100%;
-        max-width: 500px;
+        /* max-width: 500px; */
     }
 
     .Details-Image-Container img {
@@ -971,7 +1016,6 @@
                 width: 100%;
                 display: flex;
                 flex-direction: column;
-                align-items: center;
                 gap: 15px;
             
                 button {
@@ -1012,14 +1056,10 @@
     .Details-Section{
         width: 100%;
         display: flex;
-        align-items: center;
-        justify-content: center;
     }
     .Details-Section .Container{
         width: 100%;
-        max-width: 1120px;
-        padding-left: clamp(0px, 26.6667px + -1.8519vw, 28px);
-        padding-right: clamp(0px, 26.6667px + -1.8519vw, 28px);
+        max-width: 680px;
     }
 
     .Sub-Tabs-Container {

@@ -51,6 +51,7 @@
                         <img id="detail-image" src="" alt="Image de l'œuvre">
                     </div>
                     <h1 id="detail-title">Titre de l'œuvre</h1>
+                    <img class="Deco_3" src="./assets/images/Deco_4.svg" alt="deco">
                 </div>
                 <!-- Details -->
                 <div class="Details">
@@ -130,8 +131,10 @@
                                 </button>
                             </div>
 
-                            <!-- line -->
-                            <p class="Divider">......................................................................................................................................</p>
+                            <!-- Divider -->
+                            <p class="Divider">
+                                ........................................................................................................................................................................................................................
+                            </p>
                             <!-- License Usage Block -->
                             <div class="License-Usage-Box">
                                 <h3>Usage : <span id="usage-title">Licence Web</span></h3>
@@ -181,7 +184,9 @@
 
                     <!-- Trust Section -->
                     <div class="Trust-Section">
-                        <p>...................................................................................................................................</p>
+                        <p class="Divider">
+                            ........................................................................................................................................................................................................................
+                        </p>
                         <div class="List">
                             <img src="./assets/images/Icon-Check.svg" alt="✓">
                             <p><strong>Livraison Standard ou Expresse</strong> selon votre convenance</p>
@@ -274,54 +279,91 @@
                 </div>
             </div>
         </Section>
-
-
-        <!-- Footer (Copied from home.html) -->
-        <footer class="Footer" id="Footer">
-            <img class="Deco_2" src="./assets/images/Deco_2.svg" alt="Deco_2">
-            <div class="Container">
-                <div class="Bloc_1">
-                    <div class="bloc">
-                        <div class="Grp">
-                            <img class="Logo" src="./assets/images/Logo-ArtGallery.svg" alt="">
-                            <p>Notre Culture, notre Art</p>
-                        </div>
-                        <p>.........................................................................................................</p>
+    </main>
+    <!-- Footer (Copied from home.html) -->
+    <footer class="Footer" id="Footer">
+        <img class="Deco_2" src="./assets/images/Deco_2.svg" alt="Deco_2">
+        <div class="Container">
+            <div class="Bloc_1">
+                <div class="bloc">
+                    <div class="Grp">
+                        <img class="Logo" src="./assets/images/Logo-ArtGallery.svg" alt="">
+                        <p>Notre Culture, notre Art</p>
                     </div>
-                    <div class="Link-Container">
-                        <a class="Link" href="home.html">Accueil</a>
-                        <a class="Link" href="home.html#Grille-Section">Œuvres</a>
-                        <a class="Link" href="#">À propos</a>
-                        <a class="Link" href="#Footer">Contact</a>
-                        <a class="Link" href="#">Mentions légales</a>
-                        <a class="Link" href="#">Conditions de livraison</a>
-                    </div>
+                    <p>.........................................................................................................</p>
                 </div>
-                <div class="Bloc_2">
-                    <div class="Contact">
-                        <div class="Mail">
-                            <img src="./assets/images/Icon-Mail.svg" alt="">
-                            <p>contact@stepentreprise.com</p>
-                        </div>
-                        <div class="Number">
-                            <img src="./assets/images/Icon-WhatsApp.svg" alt="">
-                            <p>+243 994 991 828</p>
-                        </div>
-                    </div>
-                    <div class="SocialMedia">
-                        <a href="https://www.instagram.com/urithi_plus/"><img src="./assets/images/Icon-IG.svg" alt=""></a>
-                        <a href="https://www.tiktok.com/@urithiplus"><img src="./assets/images/Icon-Tik.svg" alt=""></a>
-                        <a href="https://www.facebook.com/STEPUrithi"><img src="./assets/images/Icon-FB.svg" alt=""></a>
-                    </div>
-                    <p class="Copyright">© 2026 STEP Plus - Urithi+ | Art Gallery. Tous droits réservés.</p>
+                <div class="Link-Container">
+                    <a class="Link" href="home.html">Accueil</a>
+                    <a class="Link" href="home.html#Grille-Section">Œuvres</a>
+                    <a class="Link" href="#">À propos</a>
+                    <a class="Link" href="#Footer">Contact</a>
+                    <a class="Link" href="#">Mentions légales</a>
+                    <a class="Link" href="#">Conditions de livraison</a>
                 </div>
             </div>
-        </footer>
-    </main>
+            <div class="Bloc_2">
+                <div class="Contact">
+                    <div class="Mail">
+                        <img src="./assets/images/Icon-Mail.svg" alt="">
+                        <p>contact@stepentreprise.com</p>
+                    </div>
+                    <div class="Number">
+                        <img src="./assets/images/Icon-WhatsApp.svg" alt="">
+                        <p>+243 994 991 828</p>
+                    </div>
+                </div>
+                <div class="SocialMedia">
+                    <a href="https://www.instagram.com/urithi_plus/"><img src="./assets/images/Icon-IG.svg" alt=""></a>
+                    <a href="https://www.tiktok.com/@urithiplus"><img src="./assets/images/Icon-Tik.svg" alt=""></a>
+                    <a href="https://www.facebook.com/STEPUrithi"><img src="./assets/images/Icon-FB.svg" alt=""></a>
+                </div>
+                <p class="Copyright">© 2026 STEP Plus - Urithi+ | Art Gallery. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
 
-    <script src="script/details.js"></script>
     <script src="script/BtnTape.js"></script>
     <script src="script/main.js"></script>
     <script src="script/details.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const decoImage = document.querySelector('.Deco_3');
+            const tabBtns = document.querySelectorAll('.Main-Tabs .Tab-Btn');
+
+            // Masquer l'image par défaut car l'onglet 'original' est actif
+            if (decoImage) {
+                decoImage.style.display = 'none';
+            }
+
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    if (decoImage) {
+                        // N'afficher l'image que sur desktop (>= 700px) ET si l'onglet est 'licences'
+                        if (window.innerWidth >= 700 && btn.dataset.tab === 'licences') {
+                            decoImage.style.display = 'inline-block';
+                        } else {
+                            // Masquer sur mobile ou si on clique sur 'original'
+                            decoImage.style.display = 'none';
+                        }
+                    }
+                });
+            });
+
+            // Gérer le cas où l'utilisateur redimensionne la fenêtre
+            window.addEventListener('resize', () => {
+                if (decoImage) {
+                    if (window.innerWidth < 700) {
+                        decoImage.style.display = 'none';
+                    } else {
+                        // Si on repasse sur desktop, on vérifie quel onglet est actif
+                        const activeTab = document.querySelector('.Main-Tabs .Tab-Btn.active');
+                        if (activeTab && activeTab.dataset.tab === 'licences') {
+                            decoImage.style.display = 'inline-block';
+                        }
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 </html>
