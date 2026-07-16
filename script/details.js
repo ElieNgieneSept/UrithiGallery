@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.classList.add('active');
             const activeContent = document.getElementById(`tab-${tabId}`);
             activeContent.classList.add('active');
-            activeContent.style.display = 'block';
+            activeContent.style.display = 'flex';
         });
     });
 
