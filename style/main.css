@@ -46,7 +46,6 @@
         overflow: clip;
     }
 /* .............. */
-/* .............. */
 
 
 /* Stylisation Button01*/
@@ -1255,23 +1254,36 @@
                     background-color: #0f140aa7;
                 }
         }
-
-
     /* ----- */
 
+    /* Restrictions */
+        .Restrictions{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+                p{
+                    font-size: 0.75rem;
+                    line-height: 18px;
+                }
+        }
+    /* ----------- */
+
+    /* Custom License Notice */
+        .Custom-License-Notice {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+
+            p{
+                font-size: 0.75rem;
+                margin-bottom: 10px;
+            }
+        }
+    /* -------------------- */
 /* ------------------ */
-
-
-
-
-
-.Custom-License-Notice {
-    margin-top: 30px;
-    padding-top: 20px;
-    border-top: 1px solid #000;
-    text-align: center;
-    color: #000;
-}
 
 .Divider{
     font-size: 0.625rem;
