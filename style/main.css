@@ -1007,7 +1007,7 @@
             font-size: 0.75rem;
         }
     /* ------------- */
-/* ...................... */
+/* ................... */
 
 /* Details Section */
     .Details-Section{
@@ -1229,23 +1229,41 @@
                 }
         }
     /* ----- */
+    
+    /* Usage */
+        #info-usage{
+            font-size: 0.875rem;
+            margin-top: 6px;
+        }
 
+        #usage-details-list {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+            color: #000;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+                li {
+                    padding: 10px;
+                    background-color: #0f140a7d;
+                    color: var(--light-01);
+                    font-size: 0.875rem;
+                }
+                li:nth-last-child(-n+2){
+                    background-color: #0f140aa7;
+                }
+        }
+
+
+    /* ----- */
 
 /* ------------------ */
 
 
 
-#usage-details-list {
-    list-style: none;
-    padding: 0;
-    margin: 20px 0;
-    color: #000;
-}
 
-#usage-details-list li {
-    padding: 8px 0;
-    border-bottom: 1px solid #eee;
-}
 
 .Custom-License-Notice {
     margin-top: 30px;

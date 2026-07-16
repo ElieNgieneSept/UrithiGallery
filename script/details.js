@@ -54,12 +54,30 @@ document.addEventListener('DOMContentLoaded', () => {
                 licensePrice.textContent = lic.prix;
                 usageTitle.textContent = lic.usage;
                 
-                usageList.innerHTML = '';
-                lic.details.forEach(detail => {
-                    const li = document.createElement('li');
-                    li.textContent = detail;
-                    usageList.appendChild(li);
-                });
+                const infoUsage = document.getElementById('info-usage');
+                if (infoUsage && lic.info_usage) {
+                    infoUsage.textContent = lic.info_usage;
+                }
+                
+                if (lic.details) {
+                    const sizeEl = document.getElementById('size');
+                    if (sizeEl) sizeEl.textContent = lic.details.size || '-';
+                    
+                    const mondEl = document.getElementById('utilisation-mondiale');
+                    if (mondEl) mondEl.textContent = lic.details.utilisation_mondiale || '-';
+                    
+                    const multiEl = document.getElementById('utilisation-multisupport');
+                    if (multiEl) multiEl.textContent = lic.details.utilisation_multisupport || '-';
+                    
+                    const toutMediaEl = document.getElementById('utilisation-toutmedia');
+                    if (toutMediaEl) toutMediaEl.textContent = lic.details.utilisation_toutmedia || '-';
+                    
+                    const reventeEl = document.getElementById('droit-de-revente');
+                    if (reventeEl) reventeEl.textContent = lic.details.droit_de_revente || '-';
+                    
+                    const prodEl = document.getElementById('produits-destines-a-la-vente');
+                    if (prodEl) prodEl.textContent = lic.details.produits_destines_a_la_vente || '-';
+                }
             }
         }
 
