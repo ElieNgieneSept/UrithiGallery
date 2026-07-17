@@ -1,0 +1,15 @@
+name = "urithi-gallery"
+compatibility_date = "2026-07-17"
+compatibility_flags = ["nodejs_compat"]
+
+# Worker principal : gère l'API /api/save-data et sert les fichiers statiques
+main = "_worker.js"
+
+# Actifs statiques (votre site HTML/CSS/JS) — servi via le binding ASSETS
+[assets]
+directory = "."
+binding = "ASSETS"
+
+# Variable non secrète (le secret GITHUB_TOKEN est ajouté via le dashboard ou `wrangler secret put`)
+[vars]
+ADMIN_SECRET = "SecureArtGallery2026!"

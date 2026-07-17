@@ -283,9 +283,48 @@ btnSaveJson.addEventListener('click', downloadJsonFile);
 document.getElementById('btn-save-json-main').addEventListener('click', downloadJsonFile);
 
 // --- Upload Cloudinary (Non signé) ---
-// À remplacer par vos identifiants Cloudinary
-const CLOUD_NAME = 'VOTRE_CLOUD_NAME';
-const UPLOAD_PRESET = 'VOTRE_UPLOAD_PRESET';
+const CLOUD_NAME = 'StepPlus';
+const UPLOAD_PRESET = 'ArtGallery';
+
+// --- Publication en ligne (Worker /api/save-data) ---
+// Doit être identique à la variable ADMIN_SECRET définie dans Cloudflare
+const ADMIN_SECRET = 'SecureArtGallery2026!';
+
+async function saveToGitHub() {
+    const btn = document.getElementById('btn-publish');
+    if (!btn) return;
+    btn.disabled = true;
+    const originalText = btn.textContent;
+    btn.textContent = '⏳ Publication...';
+    try {
+        const content = btoa(unescape(encodeURIComponent(JSON.stringify({ oeuvres: currentArtworks }, null, 2))));
+
+        // Récupérer le SHA actuel du fichier sur GitHub (requis pour un PUT)
+        let sha = null;
+        try {
+            const head = await fetch('https://api.github.com/repos/ElieNgieneSept/UrithiGallery/contents/data.json', {
+                headers: { 'User-Agent': 'urithi-admin' }
+            });
+            if (head.ok) sha = (await head.json()).sha;
+        } catch (_) {}
+
+        const res = await fetch('/api/save-data', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'X-ADMIN-SECRET': ADMIN_SECRET },
+            body: JSON.stringify({ message: 'Mise à jour via Admin Dashboard', content, sha })
+        });
+
+        const data = await res.json();
+        if (!res.ok) throw new Error(data.error || 'Échec de la publication');
+        alert('✅ Publié sur le site avec succès !');
+    } catch (err) {
+        console.error(err);
+        alert('❌ ' + err.message);
+    } finally {
+        btn.disabled = false;
+        btn.textContent = originalText;
+    }
+}
 
 document.getElementById('artwork-image-file').addEventListener('change', handleImageUpload);
 document.getElementById('artist-image-file').addEventListener('change', (e) => {

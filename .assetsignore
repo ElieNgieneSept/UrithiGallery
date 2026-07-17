@@ -1,0 +1,7 @@
+node_modules
+.git
+.git_backup
+.wrangler
+*.toml
+package-lock.json
+package.json
