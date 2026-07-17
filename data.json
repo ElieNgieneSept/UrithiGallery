@@ -66,10 +66,10 @@
       "artistCategory": "sculpture",
       "artiste": "Maman Alice",
       "type": "Bronze fondu",
-      "prix": 3500,
+      "prix": 200,
       "etat": "Neuf",
       "encadrement": "Non applicable",
-      "description": "Une sculpture monumentale représentant la force et la résilience. Le travail sur les textures du bronze apporte un réalisme saisissant et une profondeur spirituelle.",
+      "description": "Une sculpture **monumentale** représentant la force et la résilience. \nLe travail sur les textures du bronze apporte un réalisme saisissant et une profondeur spirituelle.",
       "licences": {
         "web": {
           "prix": 70,
@@ -98,7 +98,7 @@
           "info_usage": "Idéal pour la presse numérique et papier, ainsi que les émissions. Crédit obligatoire."
         },
         "commerciale": {
-          "prix": 700,
+          "prix": 300,
           "usage": "Licence Commerciale",
           "details": {
             "size": "4000x3000",
