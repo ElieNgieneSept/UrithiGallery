@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (isNaN(œuvreId)) {
         alert("Aucune œuvre sélectionnée.");
-        window.location.href = 'home.html';
+        window.location.href = 'index.html';
         return;
     }
 
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const œuvre = data.oeuvres.find(o => o.id === œuvreId);
             if (!œuvre) {
                 alert("Œuvre non trouvée.");
-                window.location.href = 'home.html';
+        window.location.href = 'index.html';
                 return;
             }
             renderDetails(œuvre);
