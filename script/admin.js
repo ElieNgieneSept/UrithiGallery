@@ -134,6 +134,9 @@ btnAddNew.addEventListener('click', () => {
     document.getElementById('licence-web-prix').value = 50;
     document.getElementById('licence-media-prix').value = 150;
     document.getElementById('licence-com-prix').value = 500;
+    document.getElementById('licence-web-size').value = '800x600';
+    document.getElementById('licence-media-size').value = '1920x1080';
+    document.getElementById('licence-com-size').value = '4000x3000';
     
     listSection.style.display = 'none';
     formSection.style.display = 'block';
@@ -178,6 +181,9 @@ window.editArtwork = function(id) {
         document.getElementById('licence-web-prix').value = art.licences.web?.prix || 50;
         document.getElementById('licence-media-prix').value = art.licences.media?.prix || 150;
         document.getElementById('licence-com-prix').value = art.licences.commerciale?.prix || 500;
+        document.getElementById('licence-web-size').value = art.licences.web?.details?.size || '800x600';
+        document.getElementById('licence-media-size').value = art.licences.media?.details?.size || '1920x1080';
+        document.getElementById('licence-com-size').value = art.licences.commerciale?.details?.size || '4000x3000';
     }
 
     listSection.style.display = 'none';
@@ -236,19 +242,19 @@ artworkForm.addEventListener('submit', (e) => {
             web: {
                 prix: parseFloat(document.getElementById('licence-web-prix').value),
                 usage: "Licence Web",
-                details: { size: "800x600", utilisation_mondiale: "Oui", utilisation_multisupport: "Non", utilisation_toutmedia: "Non", droit_de_revente: "Non", produits_destines_a_la_vente: "Non" },
+                details: { size: document.getElementById('licence-web-size').value || "800x600", utilisation_mondiale: "Oui", utilisation_multisupport: "Non", utilisation_toutmedia: "Non", droit_de_revente: "Non", produits_destines_a_la_vente: "Non" },
                 info_usage: "Idéal pour les sites internet, blogs et réseaux sociaux. Usage non commercial."
             },
             media: {
                 prix: parseFloat(document.getElementById('licence-media-prix').value),
                 usage: "Licence Media",
-                details: { size: "1920x1080", utilisation_mondiale: "Oui", utilisation_multisupport: "Oui", utilisation_toutmedia: "Non", droit_de_revente: "Non", produits_destines_a_la_vente: "Non" },
+                details: { size: document.getElementById('licence-media-size').value || "1920x1080", utilisation_mondiale: "Oui", utilisation_multisupport: "Oui", utilisation_toutmedia: "Non", droit_de_revente: "Non", produits_destines_a_la_vente: "Non" },
                 info_usage: "Idéal pour la presse numérique et papier, ainsi que les émissions. Crédit obligatoire."
             },
             commerciale: {
                 prix: parseFloat(document.getElementById('licence-com-prix').value),
                 usage: "Licence Commerciale",
-                details: { size: "4000x3000", utilisation_mondiale: "Oui", utilisation_multisupport: "Oui", utilisation_toutmedia: "Oui", droit_de_revente: "Oui", produits_destines_a_la_vente: "Oui" },
+                details: { size: document.getElementById('licence-com-size').value || "4000x3000", utilisation_mondiale: "Oui", utilisation_multisupport: "Oui", utilisation_toutmedia: "Oui", droit_de_revente: "Oui", produits_destines_a_la_vente: "Oui" },
                 info_usage: "Idéal pour les campagnes publicitaires et produits dérivés. Utilisation sans restriction majeure."
             }
         }
