@@ -337,62 +337,6 @@
       }
     },
     {
-      "id": 6,
-      "titre": "L'Esprit du Fleuve",
-      "taille": "60x60cm",
-      "categorie": "sculpture",
-      "image": "./assets/images/image-2.jpg",
-      "artistImage": "./assets/images/image-2.jpg",
-      "artistCategory": "sculpture",
-      "artiste": "Lutumba Stone",
-      "type": "Pierre sculptée",
-      "prix": 1800,
-      "etat": "Très bon",
-      "encadrement": "Non applicable",
-      "description": "Une œuvre organique évoquant le mouvement fluide du fleuve Congo, sculptée dans une pierre locale rare.",
-      "licences": {
-        "web": {
-          "prix": 50,
-          "usage": "Licence Web",
-          "details": {
-            "size": "800x600",
-            "utilisation_mondiale": "Oui",
-            "utilisation_multisupport": "Non",
-            "utilisation_toutmedia": "Non",
-            "droit_de_revente": "Non",
-            "produits_destines_a_la_vente": "Non"
-          },
-          "info_usage": "Idéal pour les sites internet, blogs et réseaux sociaux. Usage non commercial."
-        },
-        "media": {
-          "prix": 140,
-          "usage": "Licence Media",
-          "details": {
-            "size": "1920x1080",
-            "utilisation_mondiale": "Oui",
-            "utilisation_multisupport": "Oui",
-            "utilisation_toutmedia": "Non",
-            "droit_de_revente": "Non",
-            "produits_destines_a_la_vente": "Non"
-          },
-          "info_usage": "Idéal pour la presse numérique et papier, ainsi que les émissions. Crédit obligatoire."
-        },
-        "commerciale": {
-          "prix": 450,
-          "usage": "Licence Commerciale",
-          "details": {
-            "size": "4000x3000",
-            "utilisation_mondiale": "Oui",
-            "utilisation_multisupport": "Oui",
-            "utilisation_toutmedia": "Oui",
-            "droit_de_revente": "Oui",
-            "produits_destines_a_la_vente": "Oui"
-          },
-          "info_usage": "Idéal pour les campagnes publicitaires et produits dérivés. Utilisation sans restriction majeure."
-        }
-      }
-    },
-    {
       "id": 7,
       "titre": "Symphonie Urbaine",
       "taille": "110x70cm",
