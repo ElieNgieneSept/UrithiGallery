@@ -40,8 +40,14 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('info-price').textContent = œuvre.prix;
         document.getElementById('info-state').textContent = œuvre.etat;
         document.getElementById('info-frame').textContent = œuvre.encadrement;
-        document.getElementById('info-description').textContent = œuvre.description;
+        function parseMarkdown(text) {
+            if (!text) return "";
+            let html = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+            html = html.replace(/\n/g, '<br>');
+            return html;
+        }
 
+        document.getElementById('info-description').innerHTML = parseMarkdown(œuvre.description);
         // Initialisation des licences
         const licenseRadios = document.querySelectorAll('input[name="license-type"]');
         const licensePrice = document.getElementById('license-price');

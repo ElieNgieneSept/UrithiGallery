@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administration - Art Gallery</title>
+    <link rel="icon" href="./assets/images/Favicon.svg">
+    <link rel="stylesheet" href="style/admin.css">
+</head>
+<body>
+    <!-- Écran de connexion -->
+    <div id="login-screen" class="screen-container">
+        <div class="login-box">
+            <img class="logo" src="./assets/images/Logo-ArtGallery.svg" alt="Logo">
+            <h2>Connexion</h2>
+            <p>Accès au tableau de bord</p>
+            <form id="login-form">
+                <input type="password" id="admin-password" placeholder="Mot de passe" required>
+                <button type="submit" class="Btn Primary">Se connecter</button>
+            </form>
+            <p id="login-error" class="error-text" style="display: none;">Mot de passe incorrect.</p>
+        </div>
+    </div>
+
+    <!-- Tableau de bord principal -->
+    <div id="dashboard-screen" class="screen-container" style="display: none;">
+        <header class="admin-header">
+            <div class="header-left">
+                <img class="logo" src="./assets/images/Logo-ArtGallery.svg" alt="Logo">
+                <h1>Administration</h1>
+            </div>
+            <div class="header-right">
+                    <button id="btn-publish" class="Btn Publish" onclick="saveToGitHub()">🚀 Publier sur le site</button>
+                    <button id="btn-logout" class="Btn Secondary">Déconnexion</button>
+                </div>
+        </header>
+
+        <main class="admin-main">
+            <!-- Liste des œuvres -->
+            <section id="list-section" class="panel">
+                <div class="panel-header">
+                    <h2>Liste des œuvres <span id="total-artworks" style="font-size: 1rem; font-weight: normal; color: var(--primary-02); margin-left: 10px;">(0)</span></h2>
+                    <div class="action-btns">
+                        <button id="btn-save-json-main" class="Btn Secondary" title="Télécharger le fichier pour test local">📥 Télécharger JSON</button>
+                        <button id="btn-add-new" class="Btn Primary">+ Ajouter une œuvre</button>
+                    </div>
+                </div>
+                <div class="table-container">
+                    <div id="artworks-grid" class="artworks-grid">
+                        <div class="grid-header">
+                            <div class="grid-cell">Image</div>
+                            <div class="grid-cell">Titre</div>
+                            <div class="grid-cell">Catégorie</div>
+                            <div class="grid-cell">Prix ($)</div>
+                            <div class="grid-cell">Actions</div>
+                        </div>
+                        <div id="grid-body" class="grid-body">
+                            <!-- Rempli en JS -->
+                        </div>
+                    </div>
+                </div>
+                <!-- Pagination -->
+                <div id="pagination" class="pagination-container">
+                    <button id="btn-prev-page" class="Btn-icon">&lt;</button>
+                    <span id="page-indicator">Page 1 / 1</span>
+                    <button id="btn-next-page" class="Btn-icon">&gt;</button>
+                </div>
+            </section>
+
+            <!-- Formulaire d'édition/ajout -->
+            <section id="form-section" class="panel" style="display: none;">
+                <div class="panel-header">
+                    <h2 id="form-title">Ajouter une œuvre</h2>
+                    <button id="btn-back" class="Btn Secondary">Retour</button>
+                </div>
+                <form id="artwork-form">
+                    <input type="hidden" id="artwork-id">
+                    
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>Titre</label>
+                            <input type="text" id="artwork-titre" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Artiste</label>
+                            <input type="text" id="artwork-artiste" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Catégorie</label>
+                            <select id="artwork-categorie" required>
+                                <option value="Peinture">Peinture</option>
+                                <option value="sculpture">Sculpture</option>
+                                <option value="mode">Mode</option>
+                                <option value="littératures">Littératures</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Prix ($)</label>
+                            <input type="number" id="artwork-prix" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Taille (ex: 80x60cm)</label>
+                            <input type="text" id="artwork-taille">
+                        </div>
+                        <div class="form-group">
+                            <label>État</label>
+                            <input type="text" id="artwork-etat">
+                        </div>
+                        <div class="form-group">
+                            <label>Type (ex: Huile sur toile)</label>
+                            <input type="text" id="artwork-type">
+                        </div>
+                        <div class="form-group">
+                            <label>Encadrement</label>
+                            <input type="text" id="artwork-encadrement">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Image de l'œuvre</label>
+                        <input type="file" id="artwork-image-file" accept="image/*">
+                        <input type="text" id="artwork-image-url" placeholder="URL de l'image (auto-rempli)" required>
+                        <p class="help-text">Sélectionnez une image pour l'uploader sur Cloudinary.</p>
+                        <div id="image-preview" class="image-preview"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Image de l'artiste</label>
+                        <input type="file" id="artist-image-file" accept="image/*">
+                        <input type="text" id="artwork-artistImage" placeholder="URL de l'image de l'artiste" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Catégorie de l'artiste (ex: Artiste peintre Congolais)</label>
+                        <input type="text" id="artwork-artistCategory">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Description (Format Markdown léger)</label>
+                        <div class="editor-toolbar">
+                            <button type="button" id="btn-bold" class="Btn-icon" title="Mettre en gras (Sélectionnez le texte puis cliquez)"><b>B</b></button>
+                            <button type="button" id="btn-newline" class="Btn-icon" title="Retour à la ligne">&crarr;</button>
+                        </div>
+                        <textarea id="artwork-description" rows="6" required></textarea>
+                    </div>
+
+                    <div class="form-group licences-group">
+                        <h3>Licences</h3>
+                        <p class="help-text">Modifiez les prix des licences si nécessaire.</p>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label>Prix Licence Web ($)</label>
+                                <input type="number" id="licence-web-prix" value="50">
+                            </div>
+                            <div class="form-group">
+                                <label>Prix Licence Media ($)</label>
+                                <input type="number" id="licence-media-prix" value="150">
+                            </div>
+                            <div class="form-group">
+                                <label>Prix Licence Commerciale ($)</label>
+                                <input type="number" id="licence-com-prix" value="500">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="Btn Primary Large">Sauvegarder l'œuvre</button>
+                        <button type="button" id="btn-save-json" class="Btn Secondary Large" title="Télécharger le fichier pour test local">📥 Télécharger data.json</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script/admin.js"></script>
+</body>
+</html>
