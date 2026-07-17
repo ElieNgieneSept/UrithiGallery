@@ -10,6 +10,18 @@ document.querySelectorAll('.BtnBurger').forEach(btn => {
     });
 });
 
+// Fermer le menu mobile au clic sur un lien
+document.querySelectorAll('.Menu-Mobile a').forEach(link => {
+    link.addEventListener('click', () => {
+        const btnBurger = document.querySelector('.BtnBurger');
+        const menuMobile = document.querySelector('.Menu-Mobile');
+        if (btnBurger && menuMobile) {
+            btnBurger.classList.remove('active');
+            menuMobile.style.left = '360%';
+        }
+    });
+});
+
 // Gestion de la sélection des boutons de filtre + filtrage dynamique des cartes
 const mapCategorie = {
     'Tout': 'tout',
