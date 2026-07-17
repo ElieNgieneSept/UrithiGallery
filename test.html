@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .masonry-container {
+        /* Définit la largeur cible d'une colonne. 
+       Le navigateur calculera automatiquement le nombre de colonnes de manière responsive. */
+        columns: 250px;
+        column-gap: 20px;
+        width: 100%;
+    }
+
+    .item {
+        /* Empêche un élément d'être coupé en deux entre deux colonnes */
+        break-inside: avoid;
+        margin-bottom: 20px;
+        /* Espace vertical entre les images */
+    }
+
+    .item img {
+        width: 100%;
+        display: block;
+        border-radius: 8px;
+    }
+</style>
+
+<body>
+    <!-- Structure de la grille -->
+    <div class="masonry-container">
+        <div class="item"><img src="./assets/images/EtrePensive_1.jpg" alt="Description"></div>
+        <div class="item"><img src="./assets/images/image-2.jpg" alt="Description"></div>
+        <div class="item"><img src="./assets/images/image-2.jpg" alt="Description"></div>
+        <div class="item"><img src="./assets/images/EtrePensive_1.jpg" alt="Description"></div>
+        <div class="item"><img src="./assets/images/EtrePensive_1.jpg" alt="Description"></div>
+        <div class="item"><img src="./assets/images/EtrePensive_1.jpg" alt="Description"></div>
+        <!-- Ajoutez autant d'éléments que nécessaire -->
+    </div>
+</body>
+
+</html>
