@@ -158,6 +158,7 @@ btnAddNew.addEventListener('click', () => {
     document.getElementById('licence-web-size').value = '800x600';
     document.getElementById('licence-media-size').value = '1920x1080';
     document.getElementById('licence-com-size').value = '4000x3000';
+    computeLicenceSizes();
     
     listSection.style.display = 'none';
     formSection.style.display = 'block';
@@ -203,8 +204,7 @@ window.editArtwork = function(id) {
         document.getElementById('licence-media-prix').value = art.licences.media?.prix || 150;
         document.getElementById('licence-com-prix').value = art.licences.commerciale?.prix || 500;
         document.getElementById('licence-web-size').value = art.licences.web?.details?.size || '800x600';
-        document.getElementById('licence-media-size').value = art.licences.media?.details?.size || '1920x1080';
-        document.getElementById('licence-com-size').value = art.licences.commerciale?.details?.size || '4000x3000';
+        computeLicenceSizes();
     }
 
     listSection.style.display = 'none';
@@ -364,6 +364,23 @@ document.getElementById('artwork-image-file').addEventListener('change', handleI
 document.getElementById('artist-image-file').addEventListener('change', (e) => {
     handleImageUpload(e, 'artwork-artistImage', null);
 });
+
+// --- Calcul automatique des dimensions de licence ---
+// Media = 2× la taille Web, Commerciale = 4× la taille Web
+function computeLicenceSizes() {
+    const web = document.getElementById('licence-web-size').value.trim();
+    const m = web.match(/^(\d+)\s*x\s*(\d+)$/i);
+    if (!m) {
+        document.getElementById('licence-media-size').value = '';
+        document.getElementById('licence-com-size').value = '';
+        return;
+    }
+    const w = parseInt(m[1], 10), h = parseInt(m[2], 10);
+    document.getElementById('licence-media-size').value = `${w * 2}x${h * 2}`;
+    document.getElementById('licence-com-size').value = `${w * 4}x${h * 4}`;
+}
+
+document.getElementById('licence-web-size').addEventListener('input', computeLicenceSizes);
 
 async function handleImageUpload(e, urlInputId = 'artwork-image-url', previewId = 'image-preview') {
     const file = e.target.files[0];
