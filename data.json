@@ -19,7 +19,7 @@
           "prix": 50,
           "usage": "Licence Web",
           "details": {
-            "size": "885,8x1181",
+            "size": "533x800",
             "utilisation_mondiale": "Oui",
             "utilisation_multisupport": "Non",
             "utilisation_toutmedia": "Non",
@@ -32,7 +32,7 @@
           "prix": 150,
           "usage": "Licence Media",
           "details": {
-            "size": "1771,5x2362",
+            "size": "1066x1600",
             "utilisation_mondiale": "Oui",
             "utilisation_multisupport": "Oui",
             "utilisation_toutmedia": "Non",
@@ -45,7 +45,7 @@
           "prix": 200,
           "usage": "Licence Commerciale",
           "details": {
-            "size": "3543x4724",
+            "size": "2132x3200",
             "utilisation_mondiale": "Oui",
             "utilisation_multisupport": "Oui",
             "utilisation_toutmedia": "Oui",
