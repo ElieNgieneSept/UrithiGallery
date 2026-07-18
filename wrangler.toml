@@ -10,8 +10,6 @@ main = "_worker.js"
 directory = "."
 binding = "ASSETS"
 
-# Variables non sensibles. Les secrets (GITHUB_TOKEN, ADMIN_PASSWORD) sont à ajouter
-# en mode "Secret/Encrypt" dans le dashboard Cloudflare du projet Worker (ou `wrangler secret put`).
-[vars]
-ADMIN_SECRET = "Administrateur#ArtGallery"
-# ADMIN_PASSWORD doit être ajouté comme SECRET chiffré (valeur : Administrateur#ArtGallery)
+# Variables non sensibles. Les secrets (GITHUB_TOKEN, ADMIN_PASSWORD, ADMIN_SECRET)
+# sont à ajouter en mode "Secret/Encrypt" dans le dashboard Cloudflare du projet Worker
+# (ou via `wrangler secret put`). ADMIN_SECRET sert à signer le token de session.
