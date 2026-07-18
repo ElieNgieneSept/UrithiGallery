@@ -1,4 +1,4 @@
-const ADMIN_PASSWORD = "Administrateur#ArtGallery"; // Mot de passe local — à changer si besoin
+// Le mot de passe est vérifié côté Cloudflare (variable ADMIN_PASSWORD), il n'est JAMAIS en clair ici.
 
 let currentArtworks = [];
 let editingId = null;
@@ -21,27 +21,38 @@ const btnSaveJson = document.getElementById('btn-save-json');
 
 // Initialisation
 document.addEventListener('DOMContentLoaded', () => {
-    // Vérifier si déjà connecté (sessionStorage)
-    if (sessionStorage.getItem('admin_auth') === 'true') {
+    // Vérifier si un token de session valide est présent
+    if (sessionStorage.getItem('admin_token')) {
         showDashboard();
     }
 });
 
-// --- Authentification ---
-loginForm.addEventListener('submit', (e) => {
+// --- Authentification (via Worker) ---
+loginForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     const pwd = document.getElementById('admin-password').value;
-    if (pwd === ADMIN_PASSWORD) {
-        sessionStorage.setItem('admin_auth', 'true');
-        loginError.style.display = 'none';
+    loginError.style.display = 'none';
+    try {
+        const res = await fetch('/api/login', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ password: pwd })
+        });
+        const data = await res.json();
+        if (!res.ok || !data.token) {
+            loginError.style.display = 'block';
+            return;
+        }
+        sessionStorage.setItem('admin_token', data.token);
         showDashboard();
-    } else {
+    } catch (err) {
+        console.error(err);
         loginError.style.display = 'block';
     }
 });
 
 btnLogout.addEventListener('click', () => {
-    sessionStorage.removeItem('admin_auth');
+    sessionStorage.removeItem('admin_token');
     loginScreen.style.display = 'flex';
     dashboardScreen.style.display = 'none';
 });
@@ -293,12 +304,19 @@ const CLOUD_NAME = 'StepPlus';
 const UPLOAD_PRESET = 'ArtGallery';
 
 // --- Publication en ligne (Worker /api/save-data) ---
-// Doit être identique à la variable ADMIN_SECRET définie dans Cloudflare
-const ADMIN_SECRET = 'SecureArtGallery2026!';
+// Le token de session est récupéré après connexion (jamais en clair côté client)
+function getAuthHeaders() {
+    const token = sessionStorage.getItem('admin_token');
+    return { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` };
+}
 
 async function saveToGitHub() {
     const btn = document.getElementById('btn-publish');
     if (!btn) return;
+    if (!sessionStorage.getItem('admin_token')) {
+        alert('Session expirée, reconnectez-vous.');
+        return;
+    }
     btn.disabled = true;
     const originalText = btn.textContent;
     btn.textContent = '⏳ Publication...';
@@ -316,7 +334,7 @@ async function saveToGitHub() {
 
         const res = await fetch('/api/save-data', {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json', 'X-ADMIN-SECRET': ADMIN_SECRET },
+            headers: getAuthHeaders(),
             body: JSON.stringify({ message: 'Mise à jour via Admin Dashboard', content, sha })
         });
 
