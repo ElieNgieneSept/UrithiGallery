@@ -1,4 +1,4 @@
-const ADMIN_PASSWORD = "admin"; // Mot de passe de test en local
+const ADMIN_PASSWORD = "Administrateur#ArtGallery"; // Mot de passe local — à changer si besoin
 
 let currentArtworks = [];
 let editingId = null;
