@@ -21,11 +21,23 @@ const btnSaveJson = document.getElementById('btn-save-json');
 
 // Initialisation
 document.addEventListener('DOMContentLoaded', () => {
-    // Vérifier si un token de session valide est présent
-    if (sessionStorage.getItem('admin_token')) {
-        showDashboard();
-    }
+    // Plus de connexion automatique : à chaque chargement de la page admin,
+    // l'utilisateur doit (re)saisir son mot de passe pour des raisons de sécurité.
+    logout();
 });
+
+// Déconnexion dès que l'utilisateur quitte la page du Dashboard
+// (changement d'onglet/URL, fermeture de l'onglet ou du navigateur)
+window.addEventListener('pagehide', logout);
+document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'hidden') logout();
+});
+
+function logout() {
+    sessionStorage.removeItem('admin_token');
+    loginScreen.style.display = 'flex';
+    dashboardScreen.style.display = 'none';
+}
 
 // --- Authentification (via Worker) ---
 loginForm.addEventListener('submit', async (e) => {
@@ -52,9 +64,7 @@ loginForm.addEventListener('submit', async (e) => {
 });
 
 btnLogout.addEventListener('click', () => {
-    sessionStorage.removeItem('admin_token');
-    loginScreen.style.display = 'flex';
-    dashboardScreen.style.display = 'none';
+    logout();
 });
 
 function showDashboard() {
