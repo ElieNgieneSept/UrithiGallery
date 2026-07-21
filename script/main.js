@@ -22,19 +22,31 @@ document.querySelectorAll('.Menu-Mobile a').forEach(link => {
     });
 });
 
+// Normalisation : insensible à la casse, accents et pluriel terminal
+const _normalize = (s) => {
+    if (!s && s !== '') return '';
+    return String(s)
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/[^\u0000-\u007F]/g, '')
+        .replace(/[\u0300-\u036f]/g, '')
+        .trim()
+        .replace(/s$/, '');
+};
+
 // Gestion de la sélection des boutons de filtre + filtrage dynamique des cartes
 const mapCategorie = {
     'Tout': 'tout',
     'Peintures': 'peinture',
     'Sculptures': 'sculpture',
     'Mode': 'mode',
-    'Littératures': 'littératures'
+    'Littératures': 'litterature'
 };
 
 const filtrerCartes = (categorie) => {
     const cartes = document.querySelectorAll('.Card-Container .Card');
     cartes.forEach(carte => {
-        const cat = carte.getAttribute('data-categorie');
+        const cat = _normalize(carte.getAttribute('data-categorie'));
         if (categorie === 'tout' || cat === categorie) {
             carte.style.display = '';
         } else {
@@ -123,7 +135,7 @@ const chargerOeuvres = () => {
             (data.oeuvres || []).forEach(oeuvre => {
                 const carte = document.createElement('div');
                 carte.className = 'Card';
-                carte.setAttribute('data-categorie', oeuvre.categorie);
+                carte.setAttribute('data-categorie', _normalize(oeuvre.categorie));
                 carte.style.cursor = 'pointer';
                 carte.innerHTML = `
                     <div class="Img-Container">

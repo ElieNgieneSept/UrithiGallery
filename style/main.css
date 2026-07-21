@@ -649,24 +649,25 @@
             }
 
             /* Effet subtil d'agrandissement pour les cards (hover) */
-            .Card,
-            .Card-Img,
-            .grid-row,
-            .artist-preview-card {
-                transition: transform 180ms ease, box-shadow 180ms ease;
-                will-change: transform;
-            }
-
-            @media (hover: hover) {
-
-                .Card:hover,
-                .Card-Img:hover,
-                .grid-row:hover,
-                .artist-preview-card:hover {
-                    transform: translateY(-6px) scale(1.02);
-                    /* box-shadow: 0 10px 22px rgba(0, 0, 0, 0.28); */
+                .Card,
+                .Card-Img,
+                .grid-row,
+                .artist-preview-card {
+                    transition: transform 180ms ease, box-shadow 180ms ease;
+                    will-change: transform;
                 }
-            }
+
+                @media (hover: hover) {
+
+                    .Card:hover,
+                    .Card-Img:hover,
+                    .grid-row:hover,
+                    .artist-preview-card:hover {
+                        transform: translateY(-6px) scale(1.02);
+                        /* box-shadow: 0 10px 22px rgba(0, 0, 0, 0.28); */
+                    }
+                }
+            /* -------------------- */
 
                 /* Infos */
                     .Card .Infos{
