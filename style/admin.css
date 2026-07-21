@@ -137,7 +137,7 @@ body {
 
 /* Table remplacée par Grid */
 .table-container {
-    overflow-x: auto;
+    /* overflow-x: auto; */
 }
 
 .artworks-grid {
