@@ -55,6 +55,62 @@
           "info_usage": "Idéal pour les campagnes publicitaires et produits dérivés. Utilisation sans restriction majeure."
         }
       }
+    },
+    {
+      "id": 1,
+      "titre": "Dépression",
+      "taille": "80x60cm",
+      "categorie": "Peinture",
+      "image": "https://res.cloudinary.com/stepplus/image/upload/f_auto,q_auto/v1784641293/ArtGallery/ndqyj93qarxnrujqnhei.png",
+      "artistImage": "https://res.cloudinary.com/stepplus/image/upload/f_auto,q_auto/v1784341955/ArtGallery/hseysfizrefoplz5orbz.png",
+      "artistCategory": "Artiste peintre Congolais",
+      "artiste": "Michée DRAYSON",
+      "type": "Peinture huile sur toile",
+      "prix": 350,
+      "etat": "L'œuvre est en parfait état",
+      "encadrement": "Oui (encadrée avec un cadre en bois)",
+      "description": "Cette peinture saisissante présente un visage de profil, baigné de lumière, portant un turban bleu et or aux motifs précieux. \nLes yeux sont clos, les lèvres scellées, le visage reposant dans une expression de calme solennel. Le titre, \"Dépression\", agit comme un contrepoint brutal à cette splendeur esthétique.\n\nLa \"dépression\" n'est pas ici représentée comme un effondrement visuel, mais comme une intériorité murée. \nLe turban devient une couronne de fardeau, une parure qui pare pour mieux cacher. Le contraste entre les couleurs vibrantes et le fond sombre et érodé symbolise le tiraillement entre le \"self\" public, lumineux et orné, et le \"self\" privé, sombre et en fragmentation. \nL'œuvre nous rappelle que la douleur la plus profonde n'est pas toujours celle qui se montre, mais celle qui s'enferme derrière le rempart d'une beauté impeccable, posant la question du corps comme ultime masque.",
+      "licences": {
+        "web": {
+          "prix": 50,
+          "usage": "Licence Web",
+          "details": {
+            "size": "800x600",
+            "utilisation_mondiale": "Oui",
+            "utilisation_multisupport": "Non",
+            "utilisation_toutmedia": "Non",
+            "droit_de_revente": "Non",
+            "produits_destines_a_la_vente": "Non"
+          },
+          "info_usage": "Idéal pour les sites internet, blogs et réseaux sociaux. Usage non commercial."
+        },
+        "media": {
+          "prix": 100,
+          "usage": "Licence Media",
+          "details": {
+            "size": "1600x1200",
+            "utilisation_mondiale": "Oui",
+            "utilisation_multisupport": "Oui",
+            "utilisation_toutmedia": "Non",
+            "droit_de_revente": "Non",
+            "produits_destines_a_la_vente": "Non"
+          },
+          "info_usage": "Idéal pour la presse numérique et papier, ainsi que les émissions. Crédit obligatoire."
+        },
+        "commerciale": {
+          "prix": 250,
+          "usage": "Licence Commerciale",
+          "details": {
+            "size": "3200x2400",
+            "utilisation_mondiale": "Oui",
+            "utilisation_multisupport": "Oui",
+            "utilisation_toutmedia": "Oui",
+            "droit_de_revente": "Oui",
+            "produits_destines_a_la_vente": "Oui"
+          },
+          "info_usage": "Idéal pour les campagnes publicitaires et produits dérivés. Utilisation sans restriction majeure."
+        }
+      }
     }
   ]
 }
