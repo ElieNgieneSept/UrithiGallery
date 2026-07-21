@@ -149,6 +149,16 @@ const chargerOeuvres = () => {
                 carte.addEventListener('click', () => {
                     window.location.href = `details.html?id=${oeuvre.id}`;
                 });
+
+                carte.addEventListener('touchstart', () => {
+                    carte.classList.add('tape-card');
+                });
+
+                carte.addEventListener('touchend', () => {
+                    setTimeout(() => {
+                        carte.classList.remove('tape-card');
+                    }, 200);
+                });
                 
                 container.appendChild(carte);
             });

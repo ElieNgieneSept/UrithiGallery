@@ -667,6 +667,19 @@
                         /* box-shadow: 0 10px 22px rgba(0, 0, 0, 0.28); */
                     }
                 }
+
+                /* Tap feedback (desktop clic + mobile tactile) */
+                .Card:active {
+                    transform: scale(0.95);
+                }
+
+                .Card.tape-card {
+                    transform: scale(0.95);
+                }
+
+                .is-touch-device .Card:hover {
+                    transform: none;
+                }
             /* -------------------- */
 
                 /* Infos */
