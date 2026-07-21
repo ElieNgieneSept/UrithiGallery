@@ -1,4 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
+    document.body.classList.add('page-loading');
+
+    const hideLoader = () => {
+        document.body.classList.remove('page-loading');
+    };
+
     // 1. Récupération de l'ID de l'œuvre depuis l'URL
     const urlParams = new URLSearchParams(window.location.search);
     const œuvreId = parseInt(urlParams.get('id'));
@@ -23,9 +29,12 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .catch(error => {
             console.error("Erreur lors du chargement des données :", error);
+            hideLoader();
         });
 
     function renderDetails(œuvre) {
+        const detailImg = document.getElementById('detail-image');
+
         // Remplissage des informations de base
         document.getElementById('detail-image').src = œuvre.image;
         document.getElementById('detail-title').textContent = œuvre.titre;
@@ -97,6 +106,14 @@ document.addEventListener('DOMContentLoaded', () => {
         // Affichage initial de la licence par défaut (celle qui est checked)
         const defaultLicense = document.querySelector('input[name="license-type"]:checked')?.value || 'web';
         updateLicenseInfo(defaultLicense);
+
+        // Attendre que l'image principale soit chargée avant de masquer le loader
+        if (detailImg.complete && detailImg.naturalWidth > 0) {
+            hideLoader();
+        } else {
+            detailImg.addEventListener('load', hideLoader, { once: true });
+            detailImg.addEventListener('error', hideLoader, { once: true });
+        }
     }
 
     // 3. Gestion des Onglets Principaux (Original vs Licences)

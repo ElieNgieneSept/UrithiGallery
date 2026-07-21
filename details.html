@@ -7,7 +7,12 @@
     <title>Détails de l'Œuvre - Art Gallery</title>
     <link rel="stylesheet" href="style/main.css">
 </head>
-<body>
+<body class="page-loading">
+    <div class="Page-Loader" id="page-loader">
+        <div class="Page-Loader__spinner"></div>
+        <p class="Page-Loader__text">Chargement de l'œuvre...</p>
+    </div>
+    <div id="page-content">
     <main>
         <!-- Navbar (Copied from index.html) -->
         <nav class="Navbar">
@@ -288,6 +293,7 @@
             </div>
         </Section>
     </main>
+    </div>
     <!-- Footer (Copied from index.html) -->
     <footer class="Footer" id="Footer">
         <img class="Deco_2" src="./assets/images/Deco_2.svg" alt="Deco_2">
