@@ -15,6 +15,19 @@
         --secondary-01: #606D38;
     }
 
+    /* Effet subtil d'agrandissement pour les cards (hover) */
+    .Card, .Card-Img, .grid-row, .artist-preview-card {
+        transition: transform 180ms ease, box-shadow 180ms ease;
+        will-change: transform;
+    }
+
+    @media (hover: hover) {
+        .Card:hover, .Card-Img:hover, .grid-row:hover, .artist-preview-card:hover {
+            transform: translateY(-6px) scale(1.02);
+            box-shadow: 0 10px 22px rgba(0,0,0,0.28);
+        }
+    }
+
     @font-face {
         font-family: 'Title';
         src: url('../public/font/Mulish-VariableFont_wght.ttf') format('truetype');
@@ -633,19 +646,21 @@
                 display: flex;
                 flex-direction: column;
                 gap: 8px;
-
-                    .Img-Container{
-                        width: 100%;
-
-                        .Card-Img{
-                            width: 100%;
-                            height: auto;
-                            display: block;
-                            border-radius: 8px;
-                        }
-                    }
+                
+                .Img-Container{
+                    width: 100%;
                     
+                    .Card-Img{
+                        width: 100%;
+                        height: auto;
+                        display: block;
+                        border-radius: 8px;
+                            
+                    }
                 }
+
+                    
+            }
                 /* Infos */
                     .Card .Infos{
                         display: flex;

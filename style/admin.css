@@ -390,3 +390,16 @@ body {
     font-size: 0.9rem;
     color: var(--light-01);
 }
+
+/* Effet subtil d'agrandissement des cards / lignes au survol */
+.grid-row, .artist-preview-card {
+    transition: transform 180ms ease, box-shadow 180ms ease;
+    will-change: transform;
+}
+
+@media (hover: hover) {
+    .grid-row:hover, .artist-preview-card:hover {
+        transform: translateY(-6px) scale(1.02);
+        box-shadow: 0 10px 18px rgba(0,0,0,0.22);
+    }
+}
