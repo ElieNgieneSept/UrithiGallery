@@ -243,6 +243,39 @@ body {
     border-radius: 8px;
 }
 
+.artist-preview {
+    margin-top: 12px;
+}
+
+.artist-preview-card {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    padding: 12px;
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 10px;
+    background: rgba(255,255,255,0.03);
+}
+
+.artist-preview-card img {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.artist-preview-card strong {
+    display: block;
+    color: var(--primary-02);
+}
+
+.artist-preview-card p {
+    margin: 4px 0 0;
+    font-size: 0.85rem;
+    color: #999;
+}
+
 /* Editeur Markdown */
 .editor-toolbar {
     display: flex;

@@ -83,7 +83,10 @@
                         </div>
                         <div class="form-group">
                             <label>Artiste</label>
-                            <input type="text" id="artwork-artiste" required>
+                            <input type="text" id="artwork-artiste" list="artist-suggestions" required>
+                            <datalist id="artist-suggestions"></datalist>
+                            <p class="help-text">Choisissez un artiste existant pour réutiliser automatiquement sa photo si elle est déjà enregistrée.</p>
+                            <div id="artist-existing-preview" class="artist-preview"></div>
                         </div>
                         <div class="form-group">
                             <label>Catégorie</label>
@@ -128,6 +131,7 @@
                         <label>Image de l'artiste</label>
                         <input type="file" id="artist-image-file" accept="image/*">
                         <input type="text" id="artwork-artistImage" placeholder="URL de l'image de l'artiste" required>
+                        <p class="help-text">L'URL se remplit automatiquement si l'artiste est déjà connu dans la base de données.</p>
                     </div>
 
                     <div class="form-group">

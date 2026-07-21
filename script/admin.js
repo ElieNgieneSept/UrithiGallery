@@ -18,6 +18,9 @@ const btnAddNew = document.getElementById('btn-add-new');
 const btnBack = document.getElementById('btn-back');
 const formTitle = document.getElementById('form-title');
 const btnSaveJson = document.getElementById('btn-save-json');
+const artistSuggestions = document.getElementById('artist-suggestions');
+const artistPreview = document.getElementById('artist-existing-preview');
+let savedArtists = [];
 
 // Initialisation
 document.addEventListener('DOMContentLoaded', () => {
@@ -82,6 +85,7 @@ async function loadData() {
         const data = await response.json();
         currentArtworks = data.oeuvres || [];
         renderTable();
+        refreshSavedArtists();
     } catch (err) {
         console.error("Erreur lors du chargement des données :", err);
         alert("Impossible de charger data.json. Assurez-vous d'être sur un serveur local.");
@@ -144,12 +148,82 @@ document.getElementById('btn-next-page').addEventListener('click', () => {
     }
 });
 
+function refreshSavedArtists() {
+    const artistsMap = new Map();
+
+    currentArtworks.forEach(art => {
+        const key = (art.artiste || '').trim().toLowerCase();
+        if (!key) return;
+        if (!artistsMap.has(key)) {
+            artistsMap.set(key, {
+                artiste: art.artiste,
+                artistImage: art.artistImage || '',
+                artistCategory: art.artistCategory || ''
+            });
+        }
+    });
+
+    savedArtists = Array.from(artistsMap.values());
+    artistSuggestions.innerHTML = '';
+    savedArtists.forEach(artist => {
+        const option = document.createElement('option');
+        option.value = artist.artiste;
+        artistSuggestions.appendChild(option);
+    });
+}
+
+function findSavedArtist(artistName) {
+    if (!artistName) return null;
+    const key = artistName.trim().toLowerCase();
+    return savedArtists.find(a => a.artiste.trim().toLowerCase() === key) || null;
+}
+
+function renderArtistPreview(artist) {
+    if (!artist) {
+        artistPreview.innerHTML = '';
+        return;
+    }
+
+    artistPreview.innerHTML = `
+        <div class="artist-preview-card">
+            <img src="${artist.artistImage}" alt="Photo de ${artist.artiste}">
+            <div>
+                <strong>${artist.artiste}</strong>
+                <p>${artist.artistCategory || 'Catégorie non définie'}</p>
+            </div>
+        </div>
+    `;
+}
+
+function tryAutoFillArtistFields() {
+    const artistName = document.getElementById('artwork-artiste').value;
+    const savedArtist = findSavedArtist(artistName);
+    if (!savedArtist) {
+        renderArtistPreview(null);
+        return;
+    }
+
+    const artistImageInput = document.getElementById('artwork-artistImage');
+    const artistCategoryInput = document.getElementById('artwork-artistCategory');
+    if (savedArtist.artistImage) {
+        artistImageInput.value = savedArtist.artistImage;
+    }
+    if (savedArtist.artistCategory) {
+        artistCategoryInput.value = savedArtist.artistCategory;
+    }
+    renderArtistPreview(savedArtist);
+}
+
+const artworkArtistInput = document.getElementById('artwork-artiste');
+artworkArtistInput.addEventListener('input', tryAutoFillArtistFields);
+
 // --- Navigation ---
 btnAddNew.addEventListener('click', () => {
     editingId = null;
     formTitle.textContent = "Ajouter une œuvre";
     artworkForm.reset();
     document.getElementById('image-preview').innerHTML = '';
+    renderArtistPreview(null);
     
     // Valeurs par défaut pour les licences
     document.getElementById('licence-web-prix').value = 50;
@@ -197,6 +271,7 @@ window.editArtwork = function(id) {
     document.getElementById('artwork-artistImage').value = art.artistImage || '';
     document.getElementById('artwork-artistCategory').value = art.artistCategory || '';
     document.getElementById('artwork-description').value = art.description || '';
+    tryAutoFillArtistFields();
 
     // Licences
     if (art.licences) {
@@ -214,6 +289,10 @@ window.editArtwork = function(id) {
 window.deleteArtwork = function(id) {
     if (confirm("Êtes-vous sûr de vouloir supprimer cette œuvre ?")) {
         currentArtworks = currentArtworks.filter(a => a.id !== id);
+        refreshSavedArtists();
+        if ((currentPage - 1) * ITEMS_PER_PAGE >= currentArtworks.length && currentPage > 1) {
+            currentPage--;
+        }
         renderTable();
     }
 };
@@ -288,6 +367,7 @@ artworkForm.addEventListener('submit', (e) => {
         currentArtworks.push(newArt);
     }
 
+    refreshSavedArtists();
     renderTable();
     listSection.style.display = 'block';
     formSection.style.display = 'none';
