@@ -895,6 +895,62 @@
           "info_usage": "Idéal pour les campagnes publicitaires et produits dérivés. Utilisation sans restriction majeure."
         }
       }
+    },
+    {
+      "id": 16,
+      "titre": "Le mouvement de la rivière",
+      "taille": "80x60cm",
+      "categorie": "Peinture",
+      "image": "https://res.cloudinary.com/stepplus/image/upload/f_auto,q_auto/v1784741425/ArtGallery/hqcrcyqshke7alljpyx1.png",
+      "artistImage": "https://res.cloudinary.com/stepplus/image/upload/f_auto,q_auto/v1784687829/ArtGallery/ztealsdkxp4szs0rvehi.png",
+      "artistCategory": "Artiste polyvalent Congolais",
+      "artiste": "Samuel KAZIMOTO",
+      "type": "Peinture huile sur toile",
+      "prix": 350,
+      "etat": "L'œuvre est en parfait état",
+      "encadrement": "Oui (encadrée avec un cadre en bois)",
+      "description": "Travaillée dans un noir et blanc sculptural, riche en matière et en empâtement au couteau, cette scène portuaire déploie une succession d'embarcations : des petites barques amarrées au premier plan jusqu'au grand navire imposant et au batelier au loin. La texture vibrante de l'eau grise et miroitante suggère un clapotis continuel.\n\nD'un point de vue philosophique, l'œuvre illustre le fameux principe du « Panta Rhei » (tout coule). La rivière ne s'arrête jamais, incarnation du temps qui s’écoule inévitablement. Les barques liées par des cordes représentent nos tentatives d'ancrage, nos haltes et nos repères dans la vie. Pourtant, malgré l'amarrage, le courant les meut doucement : « Le mouvement de la rivière » devient ainsi une métaphore de la trajectoire humaine, oscillant entre le désir de stabilité et la nécessité de suivre le cours du destin.",
+      "licences": {
+        "web": {
+          "prix": 50,
+          "usage": "Licence Web",
+          "details": {
+            "size": "800x600",
+            "utilisation_mondiale": "Oui",
+            "utilisation_multisupport": "Non",
+            "utilisation_toutmedia": "Non",
+            "droit_de_revente": "Non",
+            "produits_destines_a_la_vente": "Non"
+          },
+          "info_usage": "Idéal pour les sites internet, blogs et réseaux sociaux. Usage non commercial."
+        },
+        "media": {
+          "prix": 100,
+          "usage": "Licence Media",
+          "details": {
+            "size": "1600x1200",
+            "utilisation_mondiale": "Oui",
+            "utilisation_multisupport": "Oui",
+            "utilisation_toutmedia": "Non",
+            "droit_de_revente": "Non",
+            "produits_destines_a_la_vente": "Non"
+          },
+          "info_usage": "Idéal pour la presse numérique et papier, ainsi que les émissions. Crédit obligatoire."
+        },
+        "commerciale": {
+          "prix": 250,
+          "usage": "Licence Commerciale",
+          "details": {
+            "size": "3200x2400",
+            "utilisation_mondiale": "Oui",
+            "utilisation_multisupport": "Oui",
+            "utilisation_toutmedia": "Oui",
+            "droit_de_revente": "Oui",
+            "produits_destines_a_la_vente": "Oui"
+          },
+          "info_usage": "Idéal pour les campagnes publicitaires et produits dérivés. Utilisation sans restriction majeure."
+        }
+      }
     }
   ]
 }
