@@ -783,6 +783,62 @@
           "info_usage": "Idéal pour les campagnes publicitaires et produits dérivés. Utilisation sans restriction majeure."
         }
       }
+    },
+    {
+      "id": 14,
+      "titre": "Formes géométriques et Symbole Culturel",
+      "taille": "80x60cm",
+      "categorie": "Peinture",
+      "image": "https://res.cloudinary.com/stepplus/image/upload/f_auto,q_auto/v1784740830/ArtGallery/yg6zndcebd8ypz0rntiw.png",
+      "artistImage": "https://res.cloudinary.com/stepplus/image/upload/f_auto,q_auto/v1784687829/ArtGallery/ztealsdkxp4szs0rvehi.png",
+      "artistCategory": "Artiste polyvalent Congolais",
+      "artiste": "Samuel KAZIMOTO",
+      "type": "Peinture huile sur toile",
+      "prix": 350,
+      "etat": "L'œuvre est en parfait état",
+      "encadrement": "Oui (encadrée avec un cadre en bois)",
+      "description": "Le travail remarquable de la matière avec ses textures craquelées, ses effets d'empâtement et ses patines qui rappellent le bois vieilli ou la pierre donne une présence presque sculpturale à la toile. La composition découpe le visage en panneaux distincts, créant un dialogue visuel entre les zones d'ombre et de lumière.\n\nD'un point de vue symbolique, la peinture fonctionne comme une archive visuelle. Les formes géométriques ne sont pas abstraites par hasard ; elles constituent l'alphabet d'une mémoire collective. Ce visage serein et contemplatif agit comme un symbole culturel de résistance et d'intemporalité. Il nous invite à questionner ce qui demeure lorsque le temps efface les détails : une structure essentielle, une dignité préservée et l'empreinte indélébile de nos origines.",
+      "licences": {
+        "web": {
+          "prix": 50,
+          "usage": "Licence Web",
+          "details": {
+            "size": "800x600",
+            "utilisation_mondiale": "Oui",
+            "utilisation_multisupport": "Non",
+            "utilisation_toutmedia": "Non",
+            "droit_de_revente": "Non",
+            "produits_destines_a_la_vente": "Non"
+          },
+          "info_usage": "Idéal pour les sites internet, blogs et réseaux sociaux. Usage non commercial."
+        },
+        "media": {
+          "prix": 100,
+          "usage": "Licence Media",
+          "details": {
+            "size": "1600x1200",
+            "utilisation_mondiale": "Oui",
+            "utilisation_multisupport": "Oui",
+            "utilisation_toutmedia": "Non",
+            "droit_de_revente": "Non",
+            "produits_destines_a_la_vente": "Non"
+          },
+          "info_usage": "Idéal pour la presse numérique et papier, ainsi que les émissions. Crédit obligatoire."
+        },
+        "commerciale": {
+          "prix": 250,
+          "usage": "Licence Commerciale",
+          "details": {
+            "size": "3200x2400",
+            "utilisation_mondiale": "Oui",
+            "utilisation_multisupport": "Oui",
+            "utilisation_toutmedia": "Oui",
+            "droit_de_revente": "Oui",
+            "produits_destines_a_la_vente": "Oui"
+          },
+          "info_usage": "Idéal pour les campagnes publicitaires et produits dérivés. Utilisation sans restriction majeure."
+        }
+      }
     }
   ]
 }
