@@ -167,6 +167,62 @@
           "info_usage": "Idéal pour les campagnes publicitaires et produits dérivés. Utilisation sans restriction majeure."
         }
       }
+    },
+    {
+      "id": 3,
+      "titre": "Plénitude",
+      "taille": "80x60cm",
+      "categorie": "Peinture",
+      "image": "https://res.cloudinary.com/stepplus/image/upload/f_auto,q_auto/v1784684864/ArtGallery/rptoit9pdxps5askcgzj.png",
+      "artistImage": "https://res.cloudinary.com/stepplus/image/upload/f_auto,q_auto/v1784341955/ArtGallery/hseysfizrefoplz5orbz.png",
+      "artistCategory": "Artiste peintre Congolais",
+      "artiste": "Michée DRAYSON",
+      "type": "Peinture huile sur toile",
+      "prix": 350,
+      "etat": "L'œuvre est en parfait état",
+      "encadrement": "Oui (encadrée avec un cadre en bois)",
+      "description": "L'artiste choisit l'ascèse du clair-obscur pour explorer une notion métaphysique. \nLe choix du noir et blanc agit comme une mise à nu du monde matériel pour ne conserver que la structure essentielle des formes, le relief et la grâce.\n\nLes motifs complexes du turban et la rondeur des bijoux circulaires évoquent le cycle, la totalité et la perfection géométrique. \nLe fond texturé et brut contraste avec la douceur et la précision des traits du visage, soulignant l'émergence d'une harmonie au milieu du chaos. \n\nCette œuvre nous invite à une méditation sur la plénitude spirituelle : ce sentiment d'être pleinement soi-même, aligné avec son histoire et son héritage, dans un silence à la fois dense et réparateur.",
+      "licences": {
+        "web": {
+          "prix": 50,
+          "usage": "Licence Web",
+          "details": {
+            "size": "800x600",
+            "utilisation_mondiale": "Oui",
+            "utilisation_multisupport": "Non",
+            "utilisation_toutmedia": "Non",
+            "droit_de_revente": "Non",
+            "produits_destines_a_la_vente": "Non"
+          },
+          "info_usage": "Idéal pour les sites internet, blogs et réseaux sociaux. Usage non commercial."
+        },
+        "media": {
+          "prix": 100,
+          "usage": "Licence Media",
+          "details": {
+            "size": "1600x1200",
+            "utilisation_mondiale": "Oui",
+            "utilisation_multisupport": "Oui",
+            "utilisation_toutmedia": "Non",
+            "droit_de_revente": "Non",
+            "produits_destines_a_la_vente": "Non"
+          },
+          "info_usage": "Idéal pour la presse numérique et papier, ainsi que les émissions. Crédit obligatoire."
+        },
+        "commerciale": {
+          "prix": 250,
+          "usage": "Licence Commerciale",
+          "details": {
+            "size": "3200x2400",
+            "utilisation_mondiale": "Oui",
+            "utilisation_multisupport": "Oui",
+            "utilisation_toutmedia": "Oui",
+            "droit_de_revente": "Oui",
+            "produits_destines_a_la_vente": "Oui"
+          },
+          "info_usage": "Idéal pour les campagnes publicitaires et produits dérivés. Utilisation sans restriction majeure."
+        }
+      }
     }
   ]
 }
