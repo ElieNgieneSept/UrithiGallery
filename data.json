@@ -1063,6 +1063,62 @@
           "info_usage": "Idéal pour les campagnes publicitaires et produits dérivés. Utilisation sans restriction majeure."
         }
       }
+    },
+    {
+      "id": 19,
+      "titre": "Femme instruite",
+      "taille": "80x60cm",
+      "categorie": "Peinture",
+      "image": "https://res.cloudinary.com/stepplus/image/upload/f_auto,q_auto/v1784746845/ArtGallery/pfrki4weg3yxf9npcyzd.png",
+      "artistImage": "https://res.cloudinary.com/stepplus/image/upload/f_auto,q_auto/v1784687829/ArtGallery/ztealsdkxp4szs0rvehi.png",
+      "artistCategory": "Artiste polyvalent Congolais",
+      "artiste": "Samuel KAZIMOTO",
+      "type": "Peinture huile sur toile",
+      "prix": 350,
+      "etat": "L'œuvre est en parfait état",
+      "encadrement": "Oui (encadrée avec un cadre en bois)",
+      "description": "Au cœur d'une composition dynamique où s'entrecroisent des arcs dorés, des motifs traditionnels et des effigies sculpturales, une femme drapée d'un vert éclatant s'élève avec grâce. Son menton hautain, son geste fluide vers la lumière et sa posture pleine d'assurance traduisent une noblesse retrouvée. Le vert, symbole d'espoir, de renouveau et de croissance, contraste magnifiquement avec la chaleur des arrière-plans ocre et terreux.\n\nSur le plan philosophique, « Femme instruite » célèbre l'instruction non pas comme un simple bagage académique, mais comme un véritable instrument d'émancipation et d'éveil. L'éducation donne à la femme le pouvoir de maîtriser son propre récit, de dialoguer d'égal à égal avec l'héritage des ancêtres (symbolisé par le masque à droite) tout en traçant une voie nouvelle vers l'avenir. C'est un hommage à l'intelligence libre, éclairée et souveraine.",
+      "licences": {
+        "web": {
+          "prix": 50,
+          "usage": "Licence Web",
+          "details": {
+            "size": "800x600",
+            "utilisation_mondiale": "Oui",
+            "utilisation_multisupport": "Non",
+            "utilisation_toutmedia": "Non",
+            "droit_de_revente": "Non",
+            "produits_destines_a_la_vente": "Non"
+          },
+          "info_usage": "Idéal pour les sites internet, blogs et réseaux sociaux. Usage non commercial."
+        },
+        "media": {
+          "prix": 100,
+          "usage": "Licence Media",
+          "details": {
+            "size": "1600x1200",
+            "utilisation_mondiale": "Oui",
+            "utilisation_multisupport": "Oui",
+            "utilisation_toutmedia": "Non",
+            "droit_de_revente": "Non",
+            "produits_destines_a_la_vente": "Non"
+          },
+          "info_usage": "Idéal pour la presse numérique et papier, ainsi que les émissions. Crédit obligatoire."
+        },
+        "commerciale": {
+          "prix": 250,
+          "usage": "Licence Commerciale",
+          "details": {
+            "size": "3200x2400",
+            "utilisation_mondiale": "Oui",
+            "utilisation_multisupport": "Oui",
+            "utilisation_toutmedia": "Oui",
+            "droit_de_revente": "Oui",
+            "produits_destines_a_la_vente": "Oui"
+          },
+          "info_usage": "Idéal pour les campagnes publicitaires et produits dérivés. Utilisation sans restriction majeure."
+        }
+      }
     }
   ]
 }
