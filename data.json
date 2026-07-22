@@ -279,6 +279,62 @@
           "info_usage": "Idéal pour les campagnes publicitaires et produits dérivés. Utilisation sans restriction majeure."
         }
       }
+    },
+    {
+      "id": 5,
+      "titre": "Identité",
+      "taille": "80x60cm",
+      "categorie": "Peinture",
+      "image": "https://res.cloudinary.com/stepplus/image/upload/f_auto,q_auto/v1784685769/ArtGallery/ojuaypnyauwpompuxbpl.png",
+      "artistImage": "https://res.cloudinary.com/stepplus/image/upload/f_auto,q_auto/v1784341955/ArtGallery/hseysfizrefoplz5orbz.png",
+      "artistCategory": "Artiste peintre Congolais",
+      "artiste": "Michée DRAYSON",
+      "type": "Peinture huile sur toile",
+      "prix": 350,
+      "etat": "L'œuvre est en parfait état",
+      "encadrement": "Oui (encadrée avec un cadre en bois)",
+      "description": "Dans ce profil d'une grande noblesse, la peau du sujet se confond presque entièrement avec les motifs géométriques et symboliques de l'arrière-plan rouge vif. Seuls la pureté du vêtement et du turban d'un blanc immaculé viennent marquer une frontière lumineuse. \nCe choix esthétique fort aborde la notion d’identité non comme une entité isolée, mais comme le produit d'une symbiose avec son environnement culture et spirituel.\n\nLe visage est apaisé, les yeux clos, suggérant une acceptation profonde et sereine de son être. L'œuvre nous invite à réfléchir à ce qui constitue notre essence : sommes-nous façonnés par les symboles et l'histoire que nous portons sur notre peau, ou notre identité réside-t-elle dans le calme intérieur qui demeure sous ces empreintes ?",
+      "licences": {
+        "web": {
+          "prix": 50,
+          "usage": "Licence Web",
+          "details": {
+            "size": "800x600",
+            "utilisation_mondiale": "Oui",
+            "utilisation_multisupport": "Non",
+            "utilisation_toutmedia": "Non",
+            "droit_de_revente": "Non",
+            "produits_destines_a_la_vente": "Non"
+          },
+          "info_usage": "Idéal pour les sites internet, blogs et réseaux sociaux. Usage non commercial."
+        },
+        "media": {
+          "prix": 100,
+          "usage": "Licence Media",
+          "details": {
+            "size": "1600x1200",
+            "utilisation_mondiale": "Oui",
+            "utilisation_multisupport": "Oui",
+            "utilisation_toutmedia": "Non",
+            "droit_de_revente": "Non",
+            "produits_destines_a_la_vente": "Non"
+          },
+          "info_usage": "Idéal pour la presse numérique et papier, ainsi que les émissions. Crédit obligatoire."
+        },
+        "commerciale": {
+          "prix": 150,
+          "usage": "Licence Commerciale",
+          "details": {
+            "size": "3200x2400",
+            "utilisation_mondiale": "Oui",
+            "utilisation_multisupport": "Oui",
+            "utilisation_toutmedia": "Oui",
+            "droit_de_revente": "Oui",
+            "produits_destines_a_la_vente": "Oui"
+          },
+          "info_usage": "Idéal pour les campagnes publicitaires et produits dérivés. Utilisation sans restriction majeure."
+        }
+      }
     }
   ]
 }
