@@ -671,6 +671,62 @@
           "info_usage": "Idéal pour les campagnes publicitaires et produits dérivés. Utilisation sans restriction majeure."
         }
       }
+    },
+    {
+      "id": 12,
+      "titre": "Femme fragile",
+      "taille": "80x60cm",
+      "categorie": "Peinture",
+      "image": "https://res.cloudinary.com/stepplus/image/upload/f_auto,q_auto/v1784739378/ArtGallery/oo7gc23onlo5myox9sjk.png",
+      "artistImage": "https://res.cloudinary.com/stepplus/image/upload/f_auto,q_auto/v1784687829/ArtGallery/ztealsdkxp4szs0rvehi.png",
+      "artistCategory": "Artiste polyvalent Congolais",
+      "artiste": "Samuel KAZIMOTO",
+      "type": "Peinture huile sur toile",
+      "prix": 350,
+      "etat": "L'œuvre est en parfait état",
+      "encadrement": "Oui (encadrée avec un cadre en bois)",
+      "description": "Traité dans un registre monochromatique de sépia, d'ivoire et de brun sombre, ce tableau déstructure le corps féminin en formes géométriques douces et courbées. La tête inclinée, reposant pesamment sur la main, les yeux clos dans une attitude de recueillement ou de lassitude, la figure semble s'enrouler sur elle-même.\n\nSur le plan philosophique, l'œuvre offre une réinterprétation profonde du titre « Femme fragile ». La fragilité n'y apparaît pas comme une faiblesse ou une défaillance, mais comme une sensibilité à vif, un moment d'honnêteté absolue face à la complexité de l'existence. \n\nLa fragmentation cubiste des traits et de l'arrière-plan reflète l'état d'une âme traversée par le doute, mais la continuité des lignes et la chaleur des tons neutres apportent une harmonie poignante : c'est dans l'acceptation de sa propre vulnérabilité que le sujet trouve sa véritable dignité.",
+      "licences": {
+        "web": {
+          "prix": 50,
+          "usage": "Licence Web",
+          "details": {
+            "size": "800x600",
+            "utilisation_mondiale": "Oui",
+            "utilisation_multisupport": "Non",
+            "utilisation_toutmedia": "Non",
+            "droit_de_revente": "Non",
+            "produits_destines_a_la_vente": "Non"
+          },
+          "info_usage": "Idéal pour les sites internet, blogs et réseaux sociaux. Usage non commercial."
+        },
+        "media": {
+          "prix": 100,
+          "usage": "Licence Media",
+          "details": {
+            "size": "1600x1200",
+            "utilisation_mondiale": "Oui",
+            "utilisation_multisupport": "Oui",
+            "utilisation_toutmedia": "Non",
+            "droit_de_revente": "Non",
+            "produits_destines_a_la_vente": "Non"
+          },
+          "info_usage": "Idéal pour la presse numérique et papier, ainsi que les émissions. Crédit obligatoire."
+        },
+        "commerciale": {
+          "prix": 250,
+          "usage": "Licence Commerciale",
+          "details": {
+            "size": "3200x2400",
+            "utilisation_mondiale": "Oui",
+            "utilisation_multisupport": "Oui",
+            "utilisation_toutmedia": "Oui",
+            "droit_de_revente": "Oui",
+            "produits_destines_a_la_vente": "Oui"
+          },
+          "info_usage": "Idéal pour les campagnes publicitaires et produits dérivés. Utilisation sans restriction majeure."
+        }
+      }
     }
   ]
 }
