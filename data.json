@@ -951,6 +951,62 @@
           "info_usage": "Idéal pour les campagnes publicitaires et produits dérivés. Utilisation sans restriction majeure."
         }
       }
+    },
+    {
+      "id": 17,
+      "titre": "Femme souffrante",
+      "taille": "80x60cm",
+      "categorie": "Peinture",
+      "image": "https://res.cloudinary.com/stepplus/image/upload/f_auto,q_auto/v1784746349/ArtGallery/ztidhipaqhyhn0iui9hy.png",
+      "artistImage": "https://res.cloudinary.com/stepplus/image/upload/f_auto,q_auto/v1784687829/ArtGallery/ztealsdkxp4szs0rvehi.png",
+      "artistCategory": "Artiste polyvalent Congolais",
+      "artiste": "Samuel KAZIMOTO",
+      "type": "Peinture huile sur toile",
+      "prix": 350,
+      "etat": "L'œuvre est en parfait état",
+      "encadrement": "Oui (encadrée avec un cadre en bois)",
+      "description": "Dominée par une palette ardemment chaleureuse déclinaisons de rouge, d'ocre incandescente et de noirs profonds, l'œuvre déploie une silhouette féminine à la fois élancée et ployée sous le poids d'un chagrin invisible. Les lignes fluides et calligraphiques enveloppent le corps dans un mouvement organique, presque sculptural, où la tête inclinée marque un repli total sur soi.\n\nD'un point de vue philosophique, la toile explore la métamorphose de la douleur. La souffrance n'y est pas représentée comme un effondrement laid ou désordonné, mais comme une épreuve qui modèle la matière et affine la sensibilité. Le fond enflammé symbolise le brasier intérieur, cette tempête d'émotions à travers laquelle le sujet passe pour mieux se révéler à lui-même. C’est un hommage à la résilience : la démonstration que la souffrance peut revêtir une grâce souveraine.",
+      "licences": {
+        "web": {
+          "prix": 50,
+          "usage": "Licence Web",
+          "details": {
+            "size": "800x600",
+            "utilisation_mondiale": "Oui",
+            "utilisation_multisupport": "Non",
+            "utilisation_toutmedia": "Non",
+            "droit_de_revente": "Non",
+            "produits_destines_a_la_vente": "Non"
+          },
+          "info_usage": "Idéal pour les sites internet, blogs et réseaux sociaux. Usage non commercial."
+        },
+        "media": {
+          "prix": 100,
+          "usage": "Licence Media",
+          "details": {
+            "size": "1600x1200",
+            "utilisation_mondiale": "Oui",
+            "utilisation_multisupport": "Oui",
+            "utilisation_toutmedia": "Non",
+            "droit_de_revente": "Non",
+            "produits_destines_a_la_vente": "Non"
+          },
+          "info_usage": "Idéal pour la presse numérique et papier, ainsi que les émissions. Crédit obligatoire."
+        },
+        "commerciale": {
+          "prix": 250,
+          "usage": "Licence Commerciale",
+          "details": {
+            "size": "3200x2400",
+            "utilisation_mondiale": "Oui",
+            "utilisation_multisupport": "Oui",
+            "utilisation_toutmedia": "Oui",
+            "droit_de_revente": "Oui",
+            "produits_destines_a_la_vente": "Oui"
+          },
+          "info_usage": "Idéal pour les campagnes publicitaires et produits dérivés. Utilisation sans restriction majeure."
+        }
+      }
     }
   ]
 }
