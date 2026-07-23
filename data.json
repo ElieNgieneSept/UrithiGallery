@@ -6,6 +6,12 @@
       "taille": "80x60cm",
       "categorie": "Peinture",
       "image": "https://res.cloudinary.com/stepplus/image/upload/f_auto,q_auto/v1784341844/ArtGallery/ay7l9xqwhzytdvhlqkus.jpg",
+      "images": [
+        "https://res.cloudinary.com/stepplus/image/upload/f_auto,q_auto/v1784341844/ArtGallery/ay7l9xqwhzytdvhlqkus.jpg",
+        "https://res.cloudinary.com/stepplus/image/upload/f_auto,q_auto/v1784792846/ArtGallery/gdnozcrlrjje2o31z3wu.png",
+        "https://res.cloudinary.com/stepplus/image/upload/f_auto,q_auto/v1784792858/ArtGallery/ioycxx2h9bh7zxr7ldql.png",
+        "https://res.cloudinary.com/stepplus/image/upload/f_auto,q_auto/v1784792868/ArtGallery/wexdc9x4k4outa64cnsr.png"
+      ],
       "artistImage": "https://res.cloudinary.com/stepplus/image/upload/f_auto,q_auto/v1784341955/ArtGallery/hseysfizrefoplz5orbz.png",
       "artistCategory": "Artiste peintre Congolais",
       "artiste": "Michée DRAYSON",
