@@ -123,8 +123,15 @@
                         <label>Image de l'œuvre</label>
                         <input type="file" id="artwork-image-file" accept="image/*">
                         <input type="text" id="artwork-image-url" placeholder="URL de l'image (auto-rempli)" required>
-                        <p class="help-text">Sélectionnez une image pour l'uploader sur Cloudinary.</p>
+                        <p class="help-text">Sélectionnez une image pour l'uploader sur Cloudinary. Celle-ci sera l'image principale (couverture).</p>
                         <div id="image-preview" class="image-preview"></div>
+                    </div>
+
+                    <div class="form-group gallery-group">
+                        <label>Autres images de l'œuvre (galerie)</label>
+                        <input type="file" id="gallery-image-file" accept="image/*" multiple>
+                        <div id="gallery-images-list" class="gallery-images-list"></div>
+                        <p class="help-text">Ajoutez plusieurs images pour montrer l'œuvre sous différents angles. La première image est la couverture ci-dessus. Sans limite de nombre.</p>
                     </div>
 
                     <div class="form-group">

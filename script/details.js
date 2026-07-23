@@ -5,6 +5,12 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.classList.remove('page-loading');
     };
 
+    let currentImages = [];
+    let currentImageIndex = 0;
+
+    const mainImageEl = document.getElementById('detail-main-image');
+    const thumbnailsContainer = document.getElementById('detail-thumbnails');
+
     // 1. Récupération de l'ID de l'œuvre depuis l'URL
     const urlParams = new URLSearchParams(window.location.search);
     const œuvreId = parseInt(urlParams.get('id'));
@@ -22,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const œuvre = data.oeuvres.find(o => o.id === œuvreId);
             if (!œuvre) {
                 alert("Œuvre non trouvée.");
-        window.location.href = 'index.html';
+                window.location.href = 'index.html';
                 return;
             }
             renderDetails(œuvre);
@@ -33,10 +39,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
     function renderDetails(œuvre) {
-        const detailImg = document.getElementById('detail-image');
+        currentImages = Array.isArray(œuvre.images) && œuvre.images.length > 0
+            ? œuvre.images
+            : [œuvre.image];
+
+        currentImageIndex = 0;
 
         // Remplissage des informations de base
-        document.getElementById('detail-image').src = œuvre.image;
+        mainImageEl.src = currentImages[0];
         document.getElementById('detail-title').textContent = œuvre.titre;
         document.getElementById('info-category').textContent = œuvre.categorie;
         document.getElementById('info-artist').textContent = œuvre.artiste;
@@ -57,6 +67,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         document.getElementById('info-description').innerHTML = parseMarkdown(œuvre.description);
+
+        // Galerie
+        renderThumbnails();
+
         // Initialisation des licences
         const licenseRadios = document.querySelectorAll('input[name="license-type"]');
         const licensePrice = document.getElementById('license-price');
@@ -108,13 +122,58 @@ document.addEventListener('DOMContentLoaded', () => {
         updateLicenseInfo(defaultLicense);
 
         // Attendre que l'image principale soit chargée avant de masquer le loader
-        if (detailImg.complete && detailImg.naturalWidth > 0) {
+        if (mainImageEl.complete && mainImageEl.naturalWidth > 0) {
             hideLoader();
         } else {
-            detailImg.addEventListener('load', hideLoader, { once: true });
-            detailImg.addEventListener('error', hideLoader, { once: true });
+            mainImageEl.addEventListener('load', hideLoader, { once: true });
+            mainImageEl.addEventListener('error', hideLoader, { once: true });
         }
     }
+
+    function renderThumbnails() {
+        thumbnailsContainer.innerHTML = '';
+        if (currentImages.length <= 1) {
+            thumbnailsContainer.style.display = 'none';
+            return;
+        }
+
+        thumbnailsContainer.style.display = 'flex';
+        currentImages.forEach((url, index) => {
+            const thumb = document.createElement('div');
+            thumb.className = 'Gallery-Thumb' + (index === currentImageIndex ? ' active' : '');
+            thumb.innerHTML = `<img src="${url}" alt="Vue ${index + 1}">`;
+            thumb.addEventListener('click', () => selectImage(index));
+            thumbnailsContainer.appendChild(thumb);
+        });
+    }
+
+    function selectImage(index) {
+        if (index < 0 || index >= currentImages.length) return;
+        currentImageIndex = index;
+        mainImageEl.src = currentImages[index];
+        updateThumbnailActive();
+    }
+
+    function updateThumbnailActive() {
+        const thumbs = thumbnailsContainer.querySelectorAll('.Gallery-Thumb');
+        thumbs.forEach((thumb, index) => {
+            if (index === currentImageIndex) {
+                thumb.classList.add('active');
+            } else {
+                thumb.classList.remove('active');
+            }
+        });
+    }
+
+    // Navigation clavier
+    document.addEventListener('keydown', (e) => {
+        if (currentImages.length <= 1) return;
+        if (e.key === 'ArrowLeft') {
+            selectImage(currentImageIndex - 1 < 0 ? currentImages.length - 1 : currentImageIndex - 1);
+        } else if (e.key === 'ArrowRight') {
+            selectImage(currentImageIndex + 1 >= currentImages.length ? 0 : currentImageIndex + 1);
+        }
+    });
 
     // 3. Gestion des Onglets Principaux (Original vs Licences)
     const mainTabs = document.querySelectorAll('.Tab-Btn');
@@ -124,14 +183,12 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.addEventListener('click', () => {
             const tabId = btn.getAttribute('data-tab');
             
-            // Masquage complet de tous les contenus et désactivation des boutons
             mainTabs.forEach(b => b.classList.remove('active'));
             mainContents.forEach(c => {
                 c.classList.remove('active');
                 c.style.display = 'none';
             });
             
-            // Activation du bouton cliqué et affichage du contenu correspondant
             btn.classList.add('active');
             const activeContent = document.getElementById(`tab-${tabId}`);
             activeContent.classList.add('active');
