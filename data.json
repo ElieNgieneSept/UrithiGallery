@@ -68,7 +68,13 @@
       "titre": "Dépression",
       "taille": "80x60cm",
       "categorie": "Peinture",
-      "image": "https://res.cloudinary.com/stepplus/image/upload/f_auto,q_auto/v1784641293/ArtGallery/ndqyj93qarxnrujqnhei.png",
+      "image": "https://res.cloudinary.com/stepplus/image/upload/f_auto,q_auto/v1784885926/ArtGallery/jdw4kwk3z8fvibuftee6.png",
+      "images": [
+        "https://res.cloudinary.com/stepplus/image/upload/f_auto,q_auto/v1784885926/ArtGallery/jdw4kwk3z8fvibuftee6.png",
+        "https://res.cloudinary.com/stepplus/image/upload/f_auto,q_auto/v1784885935/ArtGallery/utfxvfagtpbqlbpupqyx.png",
+        "https://res.cloudinary.com/stepplus/image/upload/f_auto,q_auto/v1784885945/ArtGallery/xsanyv498qnbtseaef6l.png",
+        "https://res.cloudinary.com/stepplus/image/upload/f_auto,q_auto/v1784885949/ArtGallery/aoslrpp9gawr9zzi0c7n.png"
+      ],
       "artistImage": "https://res.cloudinary.com/stepplus/image/upload/f_auto,q_auto/v1784341955/ArtGallery/hseysfizrefoplz5orbz.png",
       "artistCategory": "Artiste peintre Congolais",
       "artiste": "Michée DRAYSON",
@@ -117,8 +123,7 @@
           },
           "info_usage": "Idéal pour les campagnes publicitaires et produits dérivés. Utilisation sans restriction majeure."
         }
-      },
-      "ordre": 1
+      }
     },
     {
       "id": 9,
