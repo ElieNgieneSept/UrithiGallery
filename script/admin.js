@@ -46,34 +46,40 @@ function logout() {
 // --- Authentification (via Worker) ---
 const LOCAL_ADMIN_PASSWORD = 'Administrateur#ArtGallery';
 
+function isLocalhost() {
+    const host = window.location.hostname;
+    return host === 'localhost' || host === '127.0.0.1' || host === '' || host === 'null';
+}
+
 loginForm.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const pwd = document.getElementById('admin-password').value;
+    e.stopPropagation();
     loginError.style.display = 'none';
+
+    const pwd = document.getElementById('admin-password').value;
+
+    if (isLocalhost() && pwd === LOCAL_ADMIN_PASSWORD) {
+        sessionStorage.setItem('admin_token', 'local-dev-session');
+        showDashboard();
+        return;
+    }
+
     try {
         const res = await fetch('/api/login', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ password: pwd })
         });
-        if (res.ok) {
-            const data = await res.json();
-            if (data.token) {
-                sessionStorage.setItem('admin_token', data.token);
-                showDashboard();
-                return;
-            }
-        }
-        throw new Error('API login indisponible');
-    } catch (err) {
-        console.error(err);
-        const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
-        if (isLocalhost && pwd === LOCAL_ADMIN_PASSWORD) {
-            sessionStorage.setItem('admin_token', 'local-dev-session');
+        const data = await res.json();
+        if (res.ok && data.token) {
+            sessionStorage.setItem('admin_token', data.token);
             showDashboard();
         } else {
             loginError.style.display = 'block';
         }
+    } catch (err) {
+        console.error(err);
+        loginError.style.display = 'block';
     }
 });
 
@@ -120,7 +126,12 @@ function renderTable() {
     paginatedArtworks.forEach(art => {
         const row = document.createElement('div');
         row.className = 'grid-row';
+        row.draggable = true;
+        row.dataset.id = art.id;
+        const ordreVal = typeof art.ordre === 'number' ? art.ordre : currentArtworks.indexOf(art);
         row.innerHTML = `
+            <div class="grid-cell grid-cell-grip" title="Glisser pour réordonner">⋮⋮</div>
+            <div class="grid-cell grid-cell-ordre">${ordreVal + 1}</div>
             <div class="grid-cell"><img src="${art.image}" alt="${art.titre}"></div>
             <div class="grid-cell">${art.titre}</div>
             <div class="grid-cell">${art.categorie}</div>
@@ -144,7 +155,77 @@ function updatePaginationControls() {
     document.getElementById('btn-next-page').disabled = currentPage === totalPages;
 }
 
-document.getElementById('btn-prev-page').addEventListener('click', () => {
+let draggedRowId = null;
+let draggedRow = null;
+
+function renumberOrdre() {
+    currentArtworks.forEach((art, index) => {
+        art.ordre = index;
+    });
+}
+
+gridBody.addEventListener('dragstart', (e) => {
+    const row = e.target.closest('.grid-row');
+    if (!row) return;
+    draggedRow = row;
+    draggedRowId = row.dataset.id;
+    row.classList.add('dragging');
+    e.dataTransfer.effectAllowed = 'move';
+});
+
+gridBody.addEventListener('dragend', (e) => {
+    const row = e.target.closest('.grid-row');
+    if (row) row.classList.remove('dragging');
+    draggedRowId = null;
+    draggedRow = null;
+    gridBody.querySelectorAll('.grid-row').forEach(r => {
+        r.classList.remove('drag-over', 'drag-over-top', 'drag-over-bottom');
+    });
+});
+
+gridBody.addEventListener('dragover', (e) => {
+    e.preventDefault();
+    const row = e.target.closest('.grid-row');
+    if (!row || row === draggedRow) return;
+    const rect = row.getBoundingClientRect();
+    const mid = rect.top + rect.height / 2;
+    row.classList.add('drag-over');
+    if (e.clientY < mid) {
+        row.classList.add('drag-over-top');
+        row.classList.remove('drag-over-bottom');
+    } else {
+        row.classList.add('drag-over-bottom');
+        row.classList.remove('drag-over-top');
+    }
+});
+
+gridBody.addEventListener('dragleave', (e) => {
+    const row = e.target.closest('.grid-row');
+    if (row) row.classList.remove('drag-over', 'drag-over-top', 'drag-over-bottom');
+});
+
+gridBody.addEventListener('drop', (e) => {
+    e.preventDefault();
+    const row = e.target.closest('.grid-row');
+    if (!row || !draggedRow || row === draggedRow || draggedRowId === null) return;
+    row.classList.remove('drag-over', 'drag-over-top', 'drag-over-bottom');
+    const fromId = parseInt(draggedRowId, 10);
+    const toId = parseInt(row.dataset.id, 10);
+    const fromIndex = currentArtworks.findIndex(a => a.id === fromId);
+    const toIndex = currentArtworks.findIndex(a => a.id === toId);
+    if (fromIndex === -1 || toIndex === -1) return;
+    const rect = row.getBoundingClientRect();
+    const mid = rect.top + rect.height / 2;
+    const insertBefore = e.clientY < mid;
+    const moved = currentArtworks.splice(fromIndex, 1)[0];
+    let newIndex = currentArtworks.findIndex(a => a.id === toId);
+    if (!insertBefore) newIndex += 1;
+    currentArtworks.splice(newIndex, 0, moved);
+    renumberOrdre();
+    renderTable();
+});
+
+function renderTable() {
     if (currentPage > 1) {
         currentPage--;
         renderTable();

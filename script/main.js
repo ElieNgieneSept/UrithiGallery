@@ -132,7 +132,12 @@ const chargerOeuvres = () => {
         })
         .then(data => {
             container.innerHTML = ''; // Vide le conteneur (supprime les cartes statiques)
-            (data.oeuvres || []).forEach(oeuvre => {
+            const sortedOeuvres = (data.oeuvres || []).slice().sort((a, b) => {
+                const oa = typeof a.ordre === 'number' ? a.ordre : data.oeuvres.indexOf(a);
+                const ob = typeof b.ordre === 'number' ? b.ordre : data.oeuvres.indexOf(b);
+                return oa - ob;
+            });
+            sortedOeuvres.forEach(oeuvre => {
                 const carte = document.createElement('div');
                 carte.className = 'Card';
                 carte.setAttribute('data-categorie', _normalize(oeuvre.categorie));

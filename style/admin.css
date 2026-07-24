@@ -149,7 +149,7 @@ body {
 
 .grid-header, .grid-row {
     display: grid;
-    grid-template-columns: 80px 2fr 1fr 1fr 180px;
+    grid-template-columns: 36px 50px 80px 2fr 1fr 1fr 180px;
     gap: 15px;
     padding: 15px;
     border-bottom: 1px solid rgba(255,255,255,0.1);
@@ -171,6 +171,36 @@ body {
     object-fit: cover;
     border-radius: 6px;
     display: block;
+}
+
+.grid-cell-grip {
+    color: var(--primary-02);
+    font-size: 14px;
+    cursor: grab;
+    text-align: center;
+    user-select: none;
+}
+
+.grid-cell-ordre {
+    font-weight: 600;
+    color: var(--light-01);
+}
+
+.grid-row.dragging {
+    opacity: 0.5;
+    background: rgba(255,255,255,0.03);
+}
+
+.grid-row.drag-over {
+    border-top: 2px solid var(--primary-02);
+}
+
+.grid-row.drag-over-top {
+    box-shadow: inset 0 2px 0 0 var(--primary-02);
+}
+
+.grid-row.drag-over-bottom {
+    box-shadow: inset 0 -2px 0 0 var(--primary-02);
 }
 
 .action-btns {
