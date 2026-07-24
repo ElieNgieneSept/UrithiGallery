@@ -613,33 +613,37 @@
 
     /* Grille-Container */
         .Grille-Section .Container .Card-Container{
-            column-count: 2;
-            column-gap: 12px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
             width: 100%;
 
             /* Responsive */
                 @media (min-width: 500px) {
-                    column-count: 3;
+                    grid-template-columns: repeat(3, 1fr);
                 }
 
                 @media (min-width: 868px) {
-                    column-count: 4;
+                    grid-template-columns: repeat(4, 1fr);
                 }
             /* ---------- */
 
             .Card{
-                break-inside: avoid;
-                margin-bottom: 20px;
                 display: flex;
                 flex-direction: column;
                 gap: 8px;
+                margin-bottom: 10px;
                 
                 .Img-Container{
                     width: 100%;
+                    aspect-ratio: 4/5;
+                    overflow: hidden;
+                    border-radius: 8px;
                     
                     .Card-Img{
                         width: 100%;
-                        height: auto;
+                        height: 100%;
+                        object-fit: cover;
                         display: block;
                         border-radius: 8px;
                             
