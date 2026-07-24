@@ -225,7 +225,7 @@ gridBody.addEventListener('drop', (e) => {
     renderTable();
 });
 
-function renderTable() {
+document.getElementById('btn-prev-page').addEventListener('click', () => {
     if (currentPage > 1) {
         currentPage--;
         renderTable();
