@@ -58,6 +58,63 @@
       "ordre": 0
     },
     {
+      "id": 9,
+      "titre": "Équilibre",
+      "taille": "80x60cm",
+      "categorie": "Peinture",
+      "image": "https://res.cloudinary.com/stepplus/image/upload/f_auto,q_auto/v1784687683/ArtGallery/hilh3t3j8jlue5k2pqcj.png",
+      "artistImage": "https://res.cloudinary.com/stepplus/image/upload/f_auto,q_auto/v1784687829/ArtGallery/ztealsdkxp4szs0rvehi.png",
+      "artistCategory": "Artiste polyvalent Congolais",
+      "artiste": "Samuel KAZIMOTO",
+      "type": "Peinture huile sur toile",
+      "prix": 350,
+      "etat": "L'œuvre est en parfait état",
+      "encadrement": "Oui (encadrée avec un cadre en bois)",
+      "description": "S'inscrivant dans un style cubiste et abstrait, l'œuvre déstructure les formes pour réorganiser l'espace en une mosaïque de facettes géométriques. Les tons chauds d'ocre, de terre et d'oranger s'enchevêtrent avec les nuances froides de bleu profond et de turquoise, tandis que des yeux énigmatiques émergent de la composition pour ancrer la vision.\n\nCette toile propose une méditation sur la véritable nature de l'équilibre. L'équilibre n'est pas un état figé ou uniforme, mais une tension réussie entre des forces contraires. En juxtaposant des lignes brisées, des courbes fluides, des couleurs chaudes et froides, l'artiste montre que la stabilité s'obtient en faisant dialoguer les opposés. Le regard omniprésent symbolise la conscience observatrice qui rassemble ces éléments disparates pour créer une unité cohérente.",
+      "licences": {
+        "web": {
+          "prix": 50,
+          "usage": "Licence Web",
+          "details": {
+            "size": "800x600",
+            "utilisation_mondiale": "Oui",
+            "utilisation_multisupport": "Non",
+            "utilisation_toutmedia": "Non",
+            "droit_de_revente": "Non",
+            "produits_destines_a_la_vente": "Non"
+          },
+          "info_usage": "Idéal pour les sites internet, blogs et réseaux sociaux. Usage non commercial."
+        },
+        "media": {
+          "prix": 100,
+          "usage": "Licence Media",
+          "details": {
+            "size": "1600x1200",
+            "utilisation_mondiale": "Oui",
+            "utilisation_multisupport": "Oui",
+            "utilisation_toutmedia": "Non",
+            "droit_de_revente": "Non",
+            "produits_destines_a_la_vente": "Non"
+          },
+          "info_usage": "Idéal pour la presse numérique et papier, ainsi que les émissions. Crédit obligatoire."
+        },
+        "commerciale": {
+          "prix": 250,
+          "usage": "Licence Commerciale",
+          "details": {
+            "size": "3200x2400",
+            "utilisation_mondiale": "Oui",
+            "utilisation_multisupport": "Oui",
+            "utilisation_toutmedia": "Oui",
+            "droit_de_revente": "Oui",
+            "produits_destines_a_la_vente": "Oui"
+          },
+          "info_usage": "Idéal pour les campagnes publicitaires et produits dérivés. Utilisation sans restriction majeure."
+        }
+      },
+      "ordre": 1
+    },
+    {
       "id": 0,
       "titre": "Être pensive",
       "taille": "80x60cm",
@@ -118,7 +175,7 @@
           "info_usage": "Idéal pour les campagnes publicitaires et produits dérivés. Utilisation sans restriction majeure."
         }
       },
-      "ordre": 1
+      "ordre": 2
     },
     {
       "id": 2,
@@ -175,7 +232,7 @@
           "info_usage": "Idéal pour les campagnes publicitaires et produits dérivés. Utilisation sans restriction majeure."
         }
       },
-      "ordre": 2
+      "ordre": 3
     },
     {
       "id": 3,
@@ -232,7 +289,7 @@
           "info_usage": "Idéal pour les campagnes publicitaires et produits dérivés. Utilisation sans restriction majeure."
         }
       },
-      "ordre": 3
+      "ordre": 4
     },
     {
       "id": 4,
@@ -289,7 +346,7 @@
           "info_usage": "Idéal pour les campagnes publicitaires et produits dérivés. Utilisation sans restriction majeure."
         }
       },
-      "ordre": 4
+      "ordre": 5
     },
     {
       "id": 5,
@@ -346,7 +403,7 @@
           "info_usage": "Idéal pour les campagnes publicitaires et produits dérivés. Utilisation sans restriction majeure."
         }
       },
-      "ordre": 5
+      "ordre": 6
     },
     {
       "id": 6,
@@ -403,7 +460,7 @@
           "info_usage": "Idéal pour les campagnes publicitaires et produits dérivés. Utilisation sans restriction majeure."
         }
       },
-      "ordre": 6
+      "ordre": 7
     },
     {
       "id": 7,
@@ -460,7 +517,7 @@
           "info_usage": "Idéal pour les campagnes publicitaires et produits dérivés. Utilisation sans restriction majeure."
         }
       },
-      "ordre": 7
+      "ordre": 8
     },
     {
       "id": 8,
@@ -508,63 +565,6 @@
           "usage": "Licence Commerciale",
           "details": {
             "size": "2800x6000",
-            "utilisation_mondiale": "Oui",
-            "utilisation_multisupport": "Oui",
-            "utilisation_toutmedia": "Oui",
-            "droit_de_revente": "Oui",
-            "produits_destines_a_la_vente": "Oui"
-          },
-          "info_usage": "Idéal pour les campagnes publicitaires et produits dérivés. Utilisation sans restriction majeure."
-        }
-      },
-      "ordre": 8
-    },
-    {
-      "id": 9,
-      "titre": "Équilibre",
-      "taille": "80x60cm",
-      "categorie": "Peinture",
-      "image": "https://res.cloudinary.com/stepplus/image/upload/f_auto,q_auto/v1784687683/ArtGallery/hilh3t3j8jlue5k2pqcj.png",
-      "artistImage": "https://res.cloudinary.com/stepplus/image/upload/f_auto,q_auto/v1784687829/ArtGallery/ztealsdkxp4szs0rvehi.png",
-      "artistCategory": "Artiste polyvalent Congolais",
-      "artiste": "Samuel KAZIMOTO",
-      "type": "Peinture huile sur toile",
-      "prix": 350,
-      "etat": "L'œuvre est en parfait état",
-      "encadrement": "Oui (encadrée avec un cadre en bois)",
-      "description": "S'inscrivant dans un style cubiste et abstrait, l'œuvre déstructure les formes pour réorganiser l'espace en une mosaïque de facettes géométriques. Les tons chauds d'ocre, de terre et d'oranger s'enchevêtrent avec les nuances froides de bleu profond et de turquoise, tandis que des yeux énigmatiques émergent de la composition pour ancrer la vision.\n\nCette toile propose une méditation sur la véritable nature de l'équilibre. L'équilibre n'est pas un état figé ou uniforme, mais une tension réussie entre des forces contraires. En juxtaposant des lignes brisées, des courbes fluides, des couleurs chaudes et froides, l'artiste montre que la stabilité s'obtient en faisant dialoguer les opposés. Le regard omniprésent symbolise la conscience observatrice qui rassemble ces éléments disparates pour créer une unité cohérente.",
-      "licences": {
-        "web": {
-          "prix": 50,
-          "usage": "Licence Web",
-          "details": {
-            "size": "800x600",
-            "utilisation_mondiale": "Oui",
-            "utilisation_multisupport": "Non",
-            "utilisation_toutmedia": "Non",
-            "droit_de_revente": "Non",
-            "produits_destines_a_la_vente": "Non"
-          },
-          "info_usage": "Idéal pour les sites internet, blogs et réseaux sociaux. Usage non commercial."
-        },
-        "media": {
-          "prix": 100,
-          "usage": "Licence Media",
-          "details": {
-            "size": "1600x1200",
-            "utilisation_mondiale": "Oui",
-            "utilisation_multisupport": "Oui",
-            "utilisation_toutmedia": "Non",
-            "droit_de_revente": "Non",
-            "produits_destines_a_la_vente": "Non"
-          },
-          "info_usage": "Idéal pour la presse numérique et papier, ainsi que les émissions. Crédit obligatoire."
-        },
-        "commerciale": {
-          "prix": 250,
-          "usage": "Licence Commerciale",
-          "details": {
-            "size": "3200x2400",
             "utilisation_mondiale": "Oui",
             "utilisation_multisupport": "Oui",
             "utilisation_toutmedia": "Oui",
