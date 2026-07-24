@@ -123,22 +123,29 @@
           },
           "info_usage": "Idéal pour les campagnes publicitaires et produits dérivés. Utilisation sans restriction majeure."
         }
-      }
+      },
+      "ordre": 1
     },
     {
-      "id": 9,
-      "titre": "Équilibre",
+      "id": 2,
+      "titre": "Déséquilibre",
       "taille": "80x60cm",
       "categorie": "Peinture",
-      "image": "https://res.cloudinary.com/stepplus/image/upload/f_auto,q_auto/v1784687683/ArtGallery/hilh3t3j8jlue5k2pqcj.png",
-      "artistImage": "https://res.cloudinary.com/stepplus/image/upload/f_auto,q_auto/v1784687829/ArtGallery/ztealsdkxp4szs0rvehi.png",
-      "artistCategory": "Artiste polyvalent Congolais",
-      "artiste": "Samuel KAZIMOTO",
+      "image": "https://res.cloudinary.com/stepplus/image/upload/f_auto,q_auto/v1784886306/ArtGallery/ec1xirur074dq0t3ym2g.png",
+      "images": [
+        "https://res.cloudinary.com/stepplus/image/upload/f_auto,q_auto/v1784886306/ArtGallery/ec1xirur074dq0t3ym2g.png",
+        "https://res.cloudinary.com/stepplus/image/upload/f_auto,q_auto/v1784886310/ArtGallery/fg98mpzfj5kqjftrhiel.png",
+        "https://res.cloudinary.com/stepplus/image/upload/f_auto,q_auto/v1784886315/ArtGallery/rkbzrdblf4kwsc2zp2wb.png",
+        "https://res.cloudinary.com/stepplus/image/upload/f_auto,q_auto/v1784886321/ArtGallery/tso0zjuqszlo2osnvbul.png"
+      ],
+      "artistImage": "https://res.cloudinary.com/stepplus/image/upload/f_auto,q_auto/v1784341955/ArtGallery/hseysfizrefoplz5orbz.png",
+      "artistCategory": "Artiste peintre Congolais",
+      "artiste": "Michée DRAYSON",
       "type": "Peinture huile sur toile",
       "prix": 350,
       "etat": "L'œuvre est en parfait état",
       "encadrement": "Oui (encadrée avec un cadre en bois)",
-      "description": "S'inscrivant dans un style cubiste et abstrait, l'œuvre déstructure les formes pour réorganiser l'espace en une mosaïque de facettes géométriques. Les tons chauds d'ocre, de terre et d'oranger s'enchevêtrent avec les nuances froides de bleu profond et de turquoise, tandis que des yeux énigmatiques émergent de la composition pour ancrer la vision.\n\nCette toile propose une méditation sur la véritable nature de l'équilibre. L'équilibre n'est pas un état figé ou uniforme, mais une tension réussie entre des forces contraires. En juxtaposant des lignes brisées, des courbes fluides, des couleurs chaudes et froides, l'artiste montre que la stabilité s'obtient en faisant dialoguer les opposés. Le regard omniprésent symbolise la conscience observatrice qui rassemble ces éléments disparates pour créer une unité cohérente.",
+      "description": "L’œuvre met en scène un visage central au regard alerte et perçant, flanqué d'un double aux yeux clos, émergeant d’un réseau de coups de pinceau verticaux et hachurés. Cette composition traduit visuellement la notion de déséquilibre non pas comme un effondrement, mais comme une tension constante entre deux états d'esprit.\n\nLe sujet principal fait face au monde avec affirmation et intensité, tandis que son ombre ou son écho s’abandonne au sommeil, au doute ou à l'épuisement. Les éclats de couleur turquoise et terreuse qui traversent la toile défragmentent le portrait, suggérant que l'identité n'est pas un bloc monolithique, mais une construction fragile. \n\nLe déséquilibre devient ici le prix de la conscience : cet état de tiraillement inévitable entre la réalité extérieure que l'on affronte et le monde intérieur qui cherche à s'y dérober.",
       "licences": {
         "web": {
           "prix": 50,
@@ -183,19 +190,19 @@
       "ordre": 2
     },
     {
-      "id": 2,
-      "titre": "Déséquilibre",
+      "id": 9,
+      "titre": "Équilibre",
       "taille": "80x60cm",
       "categorie": "Peinture",
-      "image": "https://res.cloudinary.com/stepplus/image/upload/f_auto,q_auto/v1784684239/ArtGallery/uh5sg66ai3uadmpz3ez2.png",
-      "artistImage": "https://res.cloudinary.com/stepplus/image/upload/f_auto,q_auto/v1784341955/ArtGallery/hseysfizrefoplz5orbz.png",
-      "artistCategory": "Artiste peintre Congolais",
-      "artiste": "Michée DRAYSON",
+      "image": "https://res.cloudinary.com/stepplus/image/upload/f_auto,q_auto/v1784687683/ArtGallery/hilh3t3j8jlue5k2pqcj.png",
+      "artistImage": "https://res.cloudinary.com/stepplus/image/upload/f_auto,q_auto/v1784687829/ArtGallery/ztealsdkxp4szs0rvehi.png",
+      "artistCategory": "Artiste polyvalent Congolais",
+      "artiste": "Samuel KAZIMOTO",
       "type": "Peinture huile sur toile",
       "prix": 350,
       "etat": "L'œuvre est en parfait état",
       "encadrement": "Oui (encadrée avec un cadre en bois)",
-      "description": "L’œuvre met en scène un visage central au regard alerte et perçant, flanqué d'un double aux yeux clos, émergeant d’un réseau de coups de pinceau verticaux et hachurés. Cette composition traduit visuellement la notion de déséquilibre non pas comme un effondrement, mais comme une tension constante entre deux états d'esprit.\n\nLe sujet principal fait face au monde avec affirmation et intensité, tandis que son ombre ou son écho s’abandonne au sommeil, au doute ou à l'épuisement. Les éclats de couleur turquoise et terreuse qui traversent la toile défragmentent le portrait, suggérant que l'identité n'est pas un bloc monolithique, mais une construction fragile. \n\nLe déséquilibre devient ici le prix de la conscience : cet état de tiraillement inévitable entre la réalité extérieure que l'on affronte et le monde intérieur qui cherche à s'y dérober.",
+      "description": "S'inscrivant dans un style cubiste et abstrait, l'œuvre déstructure les formes pour réorganiser l'espace en une mosaïque de facettes géométriques. Les tons chauds d'ocre, de terre et d'oranger s'enchevêtrent avec les nuances froides de bleu profond et de turquoise, tandis que des yeux énigmatiques émergent de la composition pour ancrer la vision.\n\nCette toile propose une méditation sur la véritable nature de l'équilibre. L'équilibre n'est pas un état figé ou uniforme, mais une tension réussie entre des forces contraires. En juxtaposant des lignes brisées, des courbes fluides, des couleurs chaudes et froides, l'artiste montre que la stabilité s'obtient en faisant dialoguer les opposés. Le regard omniprésent symbolise la conscience observatrice qui rassemble ces éléments disparates pour créer une unité cohérente.",
       "licences": {
         "web": {
           "prix": 50,
